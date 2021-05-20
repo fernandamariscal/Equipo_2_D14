@@ -4,7 +4,8 @@
 
 # Members:
  
-<ol>Mariscal Viorato Maria Fernanda.
+<ol>
+<li>Mariscal Viorato Maria Fernanda.</li>
 <li>Ramírez Vázquez Ezequiel Alberto.</li>
 <li> De La Cruz Chavarria Christian Israel.</li>
 </ol>
