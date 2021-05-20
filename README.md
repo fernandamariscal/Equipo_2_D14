@@ -4,10 +4,10 @@
 
 # Members:
  
-<li>Mariscal Viorato Maria Fernanda.</li>
+<ol>Mariscal Viorato Maria Fernanda.
 <li>Ramírez Vázquez Ezequiel Alberto.</li>
 <li> De La Cruz Chavarria Christian Israel.</li>
-
+</ol>
 
 ## Commands to use git.
 
