@@ -2,13 +2,13 @@
 
 * This repository contains our final project.
 
-> # Members | Phase 1.
+# Members | Phase 1.
  
 <ol>
-<li>Oscar Beltran Villegas __[Scripter]__.</li>
-<li>Mariscal Viorato Maria Fernanda __[Admin]__.</li>
-<li>Ramírez Vázquez Ezequiel Alberto __[Documenter]__.</li>
-<li> De La Cruz Chavarria Christian Israel __[H-Designer]__.</li>
+<li>Oscar Beltran Villegas **[Scripter]**.</li>
+<li>Mariscal Viorato Maria Fernanda **[Admin]**.</li>
+<li>Ramírez Vázquez Ezequiel Alberto **[Documenter]**.</li>
+<li> De La Cruz Chavarria Christian Israel **[H-Designer]**.</li>
 </ol>
 
 ## Commands to use git.
