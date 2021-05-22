@@ -2,12 +2,13 @@
 
 * This repository contains our final project.
 
-# Members:
+> # Members | Phase 1.
  
 <ol>
-<li>Mariscal Viorato Maria Fernanda.</li>
-<li>Ramírez Vázquez Ezequiel Alberto.</li>
-<li> De La Cruz Chavarria Christian Israel.</li>
+<li>Oscar Beltran Villegas __[Scripter]__.</li>
+<li>Mariscal Viorato Maria Fernanda __[Admin]__.</li>
+<li>Ramírez Vázquez Ezequiel Alberto __[Documenter]__.</li>
+<li> De La Cruz Chavarria Christian Israel __[H-Designer]__.</li>
 </ol>
 
 ## Commands to use git.
@@ -21,4 +22,10 @@
 * '***git fetch -a***' to update your repo.
 * '***git pull***' to set new changes in my local repo. 
 
-## Documentation.
+## Folders:
+
+* Modules >> Verilog codes.
+
+* Screen >> S. Captures.
+
+* Test_B >> Code test.
