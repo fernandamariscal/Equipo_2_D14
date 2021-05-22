@@ -5,10 +5,10 @@
 # Members | Phase 1.
  
 <ol>
-<li>Oscar Beltran Villegas **[Scripter]**.</li>
-<li>Mariscal Viorato Maria Fernanda **[Admin]**.</li>
-<li>Ramírez Vázquez Ezequiel Alberto **[Documenter]**.</li>
-<li> De La Cruz Chavarria Christian Israel **[H-Designer]**.</li>
+<li>Oscar Beltran Villegas [__Scripter__].</li>
+<li>Mariscal Viorato Maria Fernanda [__Admin__].</li>
+<li>Ramírez Vázquez Ezequiel Alberto [__Documenter__].</li>
+<li> De La Cruz Chavarria Christian Israel [__H-Designer__].</li>
 </ol>
 
 ## Commands to use git.
