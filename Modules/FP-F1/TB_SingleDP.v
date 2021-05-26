@@ -16,7 +16,7 @@ reg CLK;
 SingleDP Finish ( CLK );
 
 
-always #10 CLK = ~CLK; //Always
+always #100 CLK = ~CLK; //Always
 
 
 initial
@@ -27,7 +27,7 @@ initial
 	$dumpfile("Phase 1");
 	$dumpvars(0, TB_SingleDP);
 
-	CLK <= 0; #100
+	CLK <= 0; #1200
 
 	$stop;
 

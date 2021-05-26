@@ -15,13 +15,7 @@ module SL2 (
 
 //3- Cuerpo del modulo
 
-//Bloque Always
-always @*
 
-begin //Inicio_A
-	
-	SLOut = SLInp << 2;
-
-end //Fin_A
+assign SLOut = SLInp << 2;
 
 endmodule

@@ -36,16 +36,16 @@ begin //Inicio_A
 			R_Op = Op1 / Op2;
 
 		3'b100: //5. OR
-			R_Op = Op1 || Op2;
+			R_Op = Op1 | Op2;
 		
 		3'b101: //6. AND
-			R_Op = Op1 && Op2;
+			R_Op = Op1 & Op2;
 		
 		3'b110: //7. SLT
-			R_Op = (Op1<Op2) ? 1:0;
+			R_Op = (Op1<Op2) ? 32'b1:32'b0;
 
 		3'b111: //8. NOP/SLL
-			R_Op = Op1 << Op2;
+			R_Op = Op1 << 0;
 			
 		default:
 			R_Op = 32'bx;

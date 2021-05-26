@@ -37,13 +37,13 @@ always @*
 
 begin //Inicio_A
 
-	if (Rw && Dir) //Writting
-
-		BReg[Dir] = DIn;
-
 	//AlwaysReading
 	L1 = BReg[Rd1];
 	L2 = BReg[Rd2];
+
+	if (Rw) //Writting
+
+		BReg[Dir] <= DIn;
 
 end
 

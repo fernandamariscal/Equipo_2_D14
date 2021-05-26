@@ -187,7 +187,7 @@ ALU alu ( rd1, OutMx2, OutALUC, ZF, OutALU );
 ADD premx ( OutAdd1, OutShift, OutAdd2 );
 
 //Instancia MxDP
-MxDP skip ( (Branch & ZF), OutAdd1, OutAdd2, OutMx3 );
+MxDP skip ( (Branch && ZF), OutAdd1, OutAdd2, OutMx3 );
 
 //Instancia DMem
 DMem rom ( MWrite, OutALU, rd2, MRead, OutMemD );
