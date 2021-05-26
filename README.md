@@ -28,4 +28,6 @@
 
 * Screen >> S. Captures.
 
+* Script >> C program.
+
 * Test_B >> Code test.
