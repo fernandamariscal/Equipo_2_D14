@@ -37,7 +37,7 @@ wire [31:0]OutIns;
 
 //Control Unit [Out]:
 wire RegDs;
-wire Wranch;
+wire Branch;
 wire MRead;
 wire MtoR;
 wire [2:0]AOp;
@@ -143,7 +143,7 @@ CUnit cunit (
 	
 	OutIns[31:26],	
 	RegDs,
-	Wranch,
+	Branch,
 	MRead,
 	MtoR,
 	AOp,
