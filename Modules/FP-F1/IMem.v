@@ -17,21 +17,21 @@ reg [7:0] IM [0:399];
 
 //3- Cuerpo del modulo
 
-//Bloque Always
-always @*
-
-	begin //Inicio_A
-
-		ITM = { IM[RAdrs], IM[RAdrs+1], IM[RAdrs+2], IM[RAdrs+3] };
-
-	end
-
 //Pre-Charge Reading.
 initial
 
 	begin
 		
 		$readmemb("TestF1_IMem.txt",IM);
+
+	end
+
+//Bloque Always
+always @*
+
+	begin //Inicio_A
+
+		ITM = { IM[RAdrs], IM[RAdrs+1], IM[RAdrs+2], IM[RAdrs+3] };
 
 	end
 

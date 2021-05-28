@@ -31,39 +31,39 @@ always @*
 								
 					6'b100000: /*  ADD  */
 
-						IA = 000;
+						IA = 3'b000;
 
 					6'b100010: /*  SUB  */
 											
-						IA = 001;
+						IA = 3'b001;
 
 					6'b011000: /*  MULT */
 
-						IA = 010;
+						IA = 3'b010;
 
 					6'b011010: /*  DIV  */
 
-						IA = 011;
+						IA = 3'b011;
 
 					6'b100101: /*  OR   */
 											
-						IA = 100;
+						IA = 3'b100;
 
 					6'b100100: /*  AND  */
 											
-						IA = 101;
+						IA = 3'b101;
 
 					6'b101010: /*  STL  */
 
-						IA = 110;
+						IA = 3'b110;
 
 					6'b000000: /* NOP/SLL */
 											
-						IA = 111;
+						IA = 3'b111;
 
 					default:
 
-						IA =3'bx;
+						IA = 3'bx;
 
 				endcase	
 			end

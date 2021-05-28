@@ -37,7 +37,7 @@ wire [31:0]OutIns;
 
 //Control Unit [Out]:
 wire RegDs;
-wire Wranch;
+wire Branch;
 wire MRead;
 wire MtoR;
 wire [2:0]AOp;
@@ -143,7 +143,7 @@ CUnit cunit (
 	
 	OutIns[31:26],	
 	RegDs,
-	Wranch,
+	Branch,
 	MRead,
 	MtoR,
 	AOp,
@@ -187,7 +187,7 @@ ALU alu ( rd1, OutMx2, OutALUC, ZF, OutALU );
 ADD premx ( OutAdd1, OutShift, OutAdd2 );
 
 //Instancia MxDP
-MxDP skip ( (Branch & ZF), OutAdd1, OutAdd2, OutMx3 );
+MxDP skip ( (Branch && ZF), OutAdd1, OutAdd2, OutMx3 );
 
 //Instancia DMem
 DMem rom ( MWrite, OutALU, rd2, MRead, OutMemD );
