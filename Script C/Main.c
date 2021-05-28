@@ -47,11 +47,11 @@ int main()
                     if(cont1 >= 0)
                         printf("Operacion   ");
                     if(cont1 >= 1)
-                        printf("rs   ");
+                        printf("rd   ");
                     if(cont1 >= 2)
-                        printf("rt   ");
+                        printf("rs   ");
                     if(cont1 == 3)
-                        printf("rd");
+                        printf("rt");
                     printf("\n");
                     if(cont1 == 0){
                         fflush(stdin);
