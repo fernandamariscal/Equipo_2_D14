@@ -2,8 +2,6 @@
 
 
 module ID_EX(
-
-			
 			
 			input RegDst_ID,
 			input Branch_ID,
@@ -60,13 +58,6 @@ begin
 		SingExtend_Ex = SingExtend_ID;
 		Ins20_16_Ex = Ins20_16_ID;
 		Ins15_11_Ex = Ins15_11_ID;
-		
-		
-		
-		
-		
-		
-		
 		
 end
 

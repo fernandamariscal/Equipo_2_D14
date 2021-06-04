@@ -130,37 +130,105 @@ wire [31:0]OutMx4;
 //Instancias
 
 
-//IF_ID
+//IF_ID [Inp]:
+// N/A
 
-
-
-wire [31:0]OutAddIF_ID;
+//IF_ID [Out]:
+wire [31:0]OutAdd1IF_ID;
 wire [31:0]OutInsIF_ID;
-//ID_EX
-wire [31:0] Out_Ex;
-wire [31:0] OutRData1;
-wire [31:0] OutRData2;
-wire [31:0] OutSingExtend;
-wire [4:0] OutIns20_16;
-wire [4:0] Out15_11;
-//
-wire WB;
-wire M;
-wire MemWrite;
-wire MemRead;
-wire [31:0 ]Add;
-wire [31:0] WriteData;
-wire [4:0]Mux;
-//
-wire RegWrite;
-wire WriteRegister;
 
 //instacia IF_ID
-IF_ID IF ( OutAdd1, OutIns, CLK, OutAddIF_ID, OutInsIF_ID); 
+IF_ID IF ( 
 
-ID_EX ID ( RegDs, Branch, MRead, MtoR, AOp, MWrite, ALUsrc, Rw, CLK, Out_Ex, OutRData1, OutRData2, OutSingExtend, OutIns20_16, Out15_11 );
+		OutAdd1,
+		OutIns,
+		CLK, 
+		OutAdd1IF_ID, 
+		OutInsIF_ID
 
-EX_MEM EX( WB,(Branch && ZF), OutMux3, M,M, OutMux3,Add,WriteData,Mux, CLK );
+);
+
+
+
+//ID_EX [Inp]:
+wire [31:0]OutInsIF_ID;
+
+//ID_EX [Out]:
+wire InpRegDs;
+wire InpBranch;
+wire InpMRead;
+wire InpMtoR;
+wire [2:0]InpAOp;
+wire InpMWrite;
+wire InpALUsrc;
+wire InpRw;
+wire [31:0]InpAdd1IF_ID;
+wire [31;0]Inprd1;
+wire [31:0]Inprd2;
+wire [31:0]InpEx;
+wire [4:0]InpIns1IF_ID;
+wire [4:0]InpIns2IF_ID;
+
+
+ID_EX ID ( 
+
+	//Inp
+	RegDs,
+	Branch,
+	MRead,
+	MtoR,
+	AOp,
+	MWrite,
+	ALUsrc,
+	Rw,
+	OutAdd1IF_ID,
+	rd1,
+	rd2,
+	OutEx,
+	OutInsIF_ID [20:16],
+	OutInsIF_ID [15:11],
+	CLK,
+	
+	//Out
+	InpRegDs,
+    InpBranch,
+    InpMRead,
+    InpMtoR,
+    InpAOp,
+    InpMWrite,
+    InpALUsrc,
+    InpRw,
+    InpAdd1IF_ID,
+    Inprd1,
+    Inprd2,
+    InpEx,
+    InpIns1IF_ID,
+    InpIns2IF_ID
+
+);
+
+//EX_MEM [Inp]:
+wire WB;
+wire M;
+
+//EX_MEM [Inp]:
+wire InpWB;
+wire InpM;
+wire MemWrite;
+wire MemRead;
+wire [31:0]MemAddress;
+wire [31:0]WriteData;
+wire [4:0]ExtoMemWB;
+
+EX_MEM EX(
+	WB,
+	M,
+	Out,
+	Add,
+	WriteData,
+	Mux,
+	CLK);
+
 
 MEM_WB MEM( RegWrite, OutMux2, OutMux2, OutMux2, WriteRegister, CLK  );
 
