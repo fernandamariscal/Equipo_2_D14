@@ -1,18 +1,29 @@
 `timescale 1ns/1ns
 
-module M(
-	input Clk,
-	input In_M,
-	output reg Out_M
-
-
+module M (
+			
+			//Inp
+			input [2:0] M,
+			input Clk,
+			
+			//Out
+		    output reg [2:0] OutM
 );
 
-always @(posedge Clk)
-    begin
-	
-	Out_M = In_M;
-	
-	
-	end
+/*	
+		
+	M /////////////
+	Branch = 1'b0;
+	MRead = 1'b0;
+	MWrite = 1'b0;
+
+*/
+
+always @ (posedge Clk)
+begin
+		
+	OutM = M;
+		
+end
+
 endmodule 

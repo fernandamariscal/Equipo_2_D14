@@ -173,14 +173,6 @@ wire [4:0]InpIns2IF_ID;
 ID_EX ID ( 
 
 	//Inp
-	RegDs,
-	Branch,
-	MRead,
-	MtoR,
-	AOp,
-	MWrite,
-	ALUsrc,
-	Rw,
 	OutAdd1IF_ID,
 	rd1,
 	rd2,
@@ -190,14 +182,6 @@ ID_EX ID (
 	CLK,
 	
 	//Out
-	InpRegDs,
-    InpBranch,
-    InpMRead,
-    InpMtoR,
-    InpAOp,
-    InpMWrite,
-    InpALUsrc,
-    InpRw,
     InpAdd1IF_ID,
     Inprd1,
     Inprd2,
