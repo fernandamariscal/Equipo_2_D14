@@ -137,9 +137,26 @@ wire [31:0]OutMx4;
 wire [31:0]OutAdd1IF_ID;
 wire [31:0]OutInsIF_ID;
 
+//instacia IF_ID
+IF_ID IF ( 
 
+<<<<<<< HEAD
 //ID_EX [Inp]:
 //wire [31:0] OutInsIF_ID;
+=======
+		OutAdd1,
+		OutIns,
+		CLK, 
+		OutAdd1IF_ID, 
+		OutInsIF_ID
+
+);
+
+
+
+//ID_EX [Inp]:
+wire [31:0]OutInsIF_ID;
+>>>>>>> dec31d34a9e3336c035505f1578e9283b1a1cd50
 
 //ID_EX [Out]:
 wire InpRegDs;
@@ -151,12 +168,17 @@ wire InpMWrite;
 wire InpALUsrc;
 wire InpRw;
 wire [31:0]InpAdd1IF_ID;
+<<<<<<< HEAD
 wire [31:0]Inprd1;
+=======
+wire [31;0]Inprd1;
+>>>>>>> dec31d34a9e3336c035505f1578e9283b1a1cd50
 wire [31:0]Inprd2;
 wire [31:0]InpEx;
 wire [4:0]InpIns1IF_ID;
 wire [4:0]InpIns2IF_ID;
 
+<<<<<<< HEAD
 //instacia IF_ID
 
 
@@ -171,6 +193,8 @@ IF_ID IF (
 );
 
 
+=======
+>>>>>>> dec31d34a9e3336c035505f1578e9283b1a1cd50
 
 ID_EX ID ( 
 

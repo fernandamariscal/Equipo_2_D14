@@ -30,9 +30,13 @@ always @*
 		case (UIn)
 
 			6'b000000: //Op 1
+<<<<<<< HEAD
 				
 				begin
 				
+=======
+
+>>>>>>> dec31d34a9e3336c035505f1578e9283b1a1cd50
 				RegDs = 1'b1;
 				Branch = 1'b0;
 				MRead = 1'b0;
@@ -79,4 +83,8 @@ always @*
 
 		*/
 
+<<<<<<< HEAD
 endmodule 
+=======
+endmodule
+>>>>>>> dec31d34a9e3336c035505f1578e9283b1a1cd50
