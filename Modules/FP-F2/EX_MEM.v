@@ -2,43 +2,48 @@
 
 
 module EX_MEM (
-    input WB,
-	input M,
-	input zero,
-	input Branch,
-	input MemWrite,
-	input MemRead,
-    input [31:0] addResult, 
+/*
+    input WBrw,
+    input WBmtoreg,
+	input MBranch,
+	input MMemRead,
+	input MMemWrite,
+	*/
+    input [31:0] addResult,
+    //input zero, 
 	input [31:0] ALUResult, 
 	input [31:0] readData2,
-    input [4:0] Mux,
+    input [4:0] ExtoMemWB,
 	input Clk,
-	output reg OutWB,
-	output reg OutM,
-	output reg Outzero,
+	/*
+	input OutWBrw,
+    input OutWBmtoreg,
 	output reg OutBranch,
-	output reg OutMemWrite,
 	output reg OutMemRead,
-    output reg [31:0] outAddResult,
-	output reg [31:0] outALUResult, 
-	output reg [31:0] outReadData2,
-    output reg [4:0] outMux
+	output reg OutMemWrite,
+	*/
+    output reg [31:0] OutAddResult,
+    //output reg Outzero,
+	output reg [31:0] OutALUResult, 
+	output reg [31:0] OutReadData2,
+    output reg [4:0] OutExtoMemWB
 	
    
    
 );
     always @(posedge Clk)
     begin
-	OutWB = WB;
-	OutM = M;
-	Outzero = zero;
-	OutBranch = Branch;
-	OutMemWrite = MemWrite;
-	OutMemRead = MemRead; 
-    outAddResult = addResult;
-    outALUResult = ALUResult;
-    outReadData2 = readData2;
-    outMux = Mux;
+	/*
+	OutWBrw = WBrw;
+	OutBranch = MBranch;
+	OutMemRead = MMemRead;
+	OutMemWrite = MMemWrite; 
+	*/
+    OutAddResult = addResult;
+   // Outzero = zero;
+    OutALUResult = ALUResult;
+    OutReadData2 = readData2;
+    OutExtoMemWB = ExtoMemWB;
   
    
     

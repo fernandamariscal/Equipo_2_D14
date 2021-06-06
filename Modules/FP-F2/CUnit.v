@@ -30,9 +30,9 @@ always @*
 		case (UIn)
 
 			6'b000000: //Op 1
-					
-				begin//{
-					
+				
+				begin
+				
 				RegDs = 1'b1;
 				Branch = 1'b0;
 				MRead = 1'b0;
@@ -42,11 +42,11 @@ always @*
 				ALUsrc = 1'b0;
 				Urw = 1'b1;
 				
-				end//}
+				end  //}
 
 			default:
 
-				begin//{
+				begin  //{
 
 		    	RegDs = 1'bx;
 				Branch = 1'bx;
@@ -63,4 +63,20 @@ always @*
 
 	end //Fin_A
 
-endmodule
+		/*	
+		
+		WB ///////////////
+			MtoR = 1'b1;
+			Urw = 1'b1;	
+		M  ///////////////
+			Branch = 1'b0;
+			MRead = 1'b0;
+			MWrite = 1'b0;
+		EX ///////////////
+			RegDs = 1'b1;
+			AOp = 3'b010;
+			ALUsrc = 1'b0;
+
+		*/
+
+endmodule 
