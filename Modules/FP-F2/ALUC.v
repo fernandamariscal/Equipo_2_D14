@@ -8,7 +8,7 @@ module ALUC (
 		input [2:0]OpA,
 		
 		//Salidas
-		output reg [3:0]IA
+		output reg [2:0]IA
 );
 
 //2- Delcaracion de señales --> NA(No aplica)
@@ -31,71 +31,75 @@ always @*
 								
 					6'b100000: /*  ADD  */
 
-						IA = 4'b0000;
+						IA = 3'b000;
 
 					6'b100010: /*  SUB  */
 											
-						IA = 4'b0001;
+						IA = 3'b001;
 
 					6'b011000: /*  MULT */
 
-						IA = 4'b0010;
+						IA = 3'b010;
 
 					6'b011010: /*  DIV  */
 
-						IA = 4'b0011;
+						IA = 3'b011;
 
 					6'b100101: /*  OR   */
 											
-						IA = 4'b0100;
+						IA = 3'b100;
 
 					6'b100100: /*  AND  */
 											
-						IA = 4'b0101;
+						IA = 3'b101;
 
 					6'b101010: /*  STL  */
 
-						IA = 4'b0110;
+						IA = 3'b110;
 
 					6'b000000: /* NOP/SLL */
 											
-						IA = 4'b0111;
-					
-					6'b001000: //ADDI
-					
-						IA = 4'b1000;
+						IA = 3'b111;
 						
-					6'b001010: // SLTI
-					
-						IA = 4'b1001;
-						
-					6'b001100: // ANDI
-					
-						IA = 4'b1010;
-						
-					6'b001101: // ORI
-					
-						IA = 4'b1011;
-						
-					6'b101011: // SW
-					
-						IA = 4'b1100;
-						
-					6'b100011: // LW
-					
-						IA = 4'b1101;
-						
-					6'b000100: // BEQ
-					
-						IA = 4'b1110;
-					
-					default:
+						default:
 
 						IA = 4'dx;
+						
+						endcase	
+			end 
 
-				endcase	
-			end
+					
+					3'b011: //ADDI
+					
+						IA = 3'b000;
+						
+					3'b100: // SLTI
+					
+						IA = 3'b110;
+						
+					3'b101: // ANDI
+					
+						IA = 3'b101;
+						
+					3'b110: // ORI
+					
+						IA = 3'b100;
+						/*
+					3'b001: // SW
+					
+						IA = 3'b100;
+						
+					3'b011:// LW
+					
+						IA = 3'b101;
+						
+					3'b011: // BEQ
+					
+						IA = 3'b110;
+					*/
+					
 
+			
 			default:
 		
 				IA = 4'dx;

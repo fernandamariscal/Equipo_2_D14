@@ -29,7 +29,7 @@ always @*
 	
 		case (UIn)
 
-			6'b000000: //TIPE-R
+			6'b000000: //TYPE-R
 
 				
 				begin
@@ -86,6 +86,76 @@ always @*
 				Urw = 1'b0;
 				
 				end 
+				
+				
+			6'b001000: //ADDI
+
+				
+				begin
+				
+
+				RegDs = 1'b1;
+				Branch = 1'b0;
+				MRead = 1'b0;
+				MtoR = 1'b1;
+				AOp = 3'b011;
+				MWrite = 1'b0;
+				ALUsrc = 1'b1;
+				Urw = 1'b1;
+				
+				end  //}
+				
+				
+			6'b001100: //ANDI
+
+				
+				begin
+				
+
+				RegDs = 1'b1;
+				Branch = 1'b0;
+				MRead = 1'b0;
+				MtoR = 1'b1;
+				AOp = 3'b101;
+				MWrite = 1'b0;
+				ALUsrc = 1'b1;
+				Urw = 1'b1;
+				
+				end  //}
+				
+			6'b001101: //ORI
+
+				
+				begin
+				
+
+				RegDs = 1'b1;
+				Branch = 1'b0;
+				MRead = 1'b0;
+				MtoR = 1'b1;
+				AOp = 3'b110;
+				MWrite = 1'b0;
+				ALUsrc = 1'b1;
+				Urw = 1'b1;
+				
+				end  //}
+				
+			6'b001010: //SLTI
+
+				
+				begin
+				
+
+				RegDs = 1'b1;
+				Branch = 1'b0;
+				MRead = 1'b0;
+				MtoR = 1'b1;
+				AOp = 3'b100;
+				MWrite = 1'b0;
+				ALUsrc = 1'b1;
+				Urw = 1'b1;
+				
+				end  //}
 				
 
 			default:
