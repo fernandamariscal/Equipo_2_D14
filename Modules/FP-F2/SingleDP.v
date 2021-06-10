@@ -44,7 +44,7 @@ wire Rw;
 
 
 /* SignEx [Inp] | SignEx [Out] */
-/* N/A */         wire [31:0]OutEx;
+/* N/A */         wire [31:0]OutExt;
 
 
 /* MxDP [Inp] | MxDP [Out] */
@@ -69,12 +69,23 @@ wire Rw;
 /* MxDP [Inp] | MxDP [Out] */
 /* N/A */       wire [31:0]OutMx3;
 
-
 /* Memory [Inp] | Memory [Out] */
 /* N/A */         wire [31:0]OutMemD;
 
 /* MxDP [Inp] | MxDP [Out] */
 /* N/A */       wire [31:0]OutMx4;
+
+
+/* WB 1 [Inp] | WB 1 [Out] */
+/* N/A */       wire [1:0]OutWB1;
+
+/* M 1 [Inp] | M 1 [Out] */
+/* N/A */      wire [2:0]OutM1;
+
+/* EX 1 [Inp] | EX 1 [Out] */
+/* N/A */       wire [4:0]OutEX1;
+
+
 /*--------- SECCIÓN 3 ----- */
 
 //IF_ID [Inp]:
@@ -91,18 +102,10 @@ wire [31:0]OutInsIF_ID;
 wire [31:0]InpAdd1IF_ID;
 wire [31:0]Inprd1;
 wire [31:0]Inprd2;
-wire [31:0]InpEx;
+wire [31:0]InpExt;
 wire [4:0]InpIns1IF_ID;
 wire [4:0]InpIns2IF_ID;
 
-
-//EX_MEM [Inp]:
-
-//EX_MEM [Inp]:
-
-wire [31:0] Address;
-wire [31:0] WriteData;
-wire [4:0] OutMUX;
 
 //MEM_WB [Out]:
 wire [31:0] OutWriteData;
@@ -115,10 +118,10 @@ wire [31:0] OutWriteData;
 /*--------- SECCIÓN 1 ------ */
 
 //Instancia MxDP
-MxDP skip (
+MxDP prepc (
 
-	(Branch && ZF), OutAdd1,
-	OutAdd2, OutMx3
+	(OutM2[2] && InpZF), OutAdd1,
+	InpAdd2, OutMx3
 
 );
 
@@ -134,20 +137,16 @@ IMem imem ( OutPC, OutIns);
 //instacia IF_ID
 IF_ID IF ( 
 
+	//Inp
 	OutAdd1,
 	OutIns,
-	CLK, 
+	CLK,
+
+	//Out 
 	OutAdd1IF_ID, 
 	OutInsIF_ID
 
 );
-
-
-WB wb (   CLK, Rw, MtoR );
-M m (    CLK, Branch, MRead, MWrite);
-EX ex (    CLK, RegDs, AOp, ALUsrc);
-
-
 
 /*--------- SECCIÓN 1 ------ */
 
@@ -171,22 +170,14 @@ CUnit cunit (
 
 );
 
-//Instancia MxSDP
-MxSDP prebank ( 
-
-	OutIns[20:16],
-	OutIns[15:11],
-	RegDs, OutMx1 
-
-);
 
 //Instancia Bank
 BankR Bank ( 
 
-	Rw,
-	OutIns[25:21],
-	OutIns[20:16],
-	OutMx1,
+	OutWB3[1],
+	OutInsIF_ID[25:21],
+	OutInsIF_ID[20:16],
+	OMx1,
 	OutMx4,
 	rd1,
 	rd2
@@ -194,7 +185,38 @@ BankR Bank (
  );
 
 //Instancia SingE
-SignE Extensor ( OutIns[15:0], OutEx );
+SignE Extensor ( OutIns[15:0], OutExt );
+
+//Instancia WB
+WB wb_s2 ( { MtoR, Rw }, CLK, OutWB1 );
+
+//Instancia M
+M m_s2 ( { Branch, MRead, MWrite }, CLK, OutM1);
+
+//Instancia EX
+EX ex_s2 ( { RegDs, AOp, ALUsrc }, CLK, OutEX1);
+
+//Instancia ID/EX
+ID_EX ID ( 
+
+	//Inp
+	OutAdd1IF_ID,
+	rd1,
+	rd2,
+	OutExt,
+	OutInsIF_ID [20:16],
+	OutInsIF_ID [15:11],
+	CLK,
+	
+	//Out
+    InpAdd1IF_ID,
+    Inprd1,
+    Inprd2,
+    InpExt,
+    InpIns1IF_ID,
+    InpIns2IF_ID
+
+);
 
 /*--------- SECCIÓN 2 ------ */
 
@@ -204,41 +226,30 @@ SignE Extensor ( OutIns[15:0], OutEx );
 /*-------- SECCIÓN 2.1 ----- */
 
 //Instancia ADD
-ADD premx ( OutAdd1, OutShift, OutAdd2 );
+ADD add_s2_1 ( InpAdd1IF_ID , OutShift, OutAdd2 );
 
 //Instancia SL2
-SL2 Shift ( OutEx, OutShift );
+SL2 preadd_s2_1 ( InpExt, OutShift );
 
 //Instancia MxSDP
-MxDP PreALU ( ALUsrc, rd2, OutEx, OutMx2 );
+MxDP PreALU ( OutEX1[0], Inprd2, InpExt, OutMx2 );
 
 //Instancia ALUC
-ALUC A_Control ( OutIns[5:0], AOp, OutALUC ); 
+ALUC A_Control ( InpExt, OutEX1[3:1], OutALUC ); 
 
 //Instancia ALU
-ALU alu ( rd1, OutMx2, OutALUC, ZF, OutALU );
+ALU alu ( Inprd1, OutMx2, OutALUC, ZF, OutALU );
 
-//Instancia ID/EX
-ID_EX ID ( 
+//Instancia MxSDP
+MxSDP Mux_s2_1 ( 
 
-	//Inp
-	OutAdd1IF_ID,
-	rd1,
-	rd2,
-	OutEx,
-	OutInsIF_ID [20:16],
-	OutInsIF_ID [15:11],
-	CLK,
-	
-	//Out
-    InpAdd1IF_ID,
-    Inprd1,
-    Inprd2,
-    InpEx,
-    InpIns1IF_ID,
-    InpIns2IF_ID
+	InpIns1IF_ID,
+	InpIns2IF_ID,
+	OutEX1[4],
+	OutMx1 
 
 );
+
 
 /*-------- SECCIÓN 2.1 ----- */
 
@@ -247,54 +258,99 @@ ID_EX ID (
 
 /*--------- SECCIÓN 3 ----- */
 
+
+/* WB 2 [Inp] | WB 2 [Out] */
+/* N/A */       wire [1:0]OutWB2;
+
+/* M 2 [Inp] | M 2 [Out] */
+/* N/A */      wire [2:0]OutM2;
+
+//Instancia WB
+WB wb_s3 ( OutWB1, OutWB2 );
+
+//Instancia M
+M m_s3 ( OutM1,OutM2 );
+
+
+//EX_MEM [Inp]:
+//N/A
+
+//EX_MEM [Out]:
+wire [31:0] InpAdd2;
+wire InpZF;
+wire [31:0] InpALU;
+wire [31:0] Outrd2;
+wire [4:0] InpMx1;
+
 //Instacia EX/MEM
 EX_MEM EX(
+	
+	//Inp
 	OutAdd2,
+	ZF,
 	OutALU,
 	Inprd2,
 	OutMx1,
 	CLK,
-	OutMx3,
-	Address,
-	WriteData,
-	OutMUX,
+
+	//Out
+	InpAdd2,
+	InpZF,
+	InpALU,
+	Outrd2,
+	InpMx1
 	
-
-);
-
-//Instancia MEM/MB
-MEM_WB MEM (
-	Address,
-	WriteData,
-	OutMUX,
-	CLK,
-	OutMx4,
-	OutMx4,
-	OutWriteData
-	
-
 );
 
 //Instancia DMem
 DMem rom (
 
-	MWrite,
-	OutALU,
-	rd2,
-	MRead,
-	OutMemD );
+	OutM2[0]
+	InpALU,
+	Outrd2,
+	OutM2[1],
+	OutMemD
+
+);
+
+/* WB 2 [Inp] | WB 2 [Out] */
+/* N/A */       wire [1:0]OutWB3;
+
+//Instancia WB
+WB wb_s3_2 ( OutWB2, OutWB3 );
+
+//MEM_WB [Inp]:
+//N/A
+
+//MEM_WB [Out]:
+wire [31:0] InpMemD;
+wire [31:0] OALU;
+wire [4:0] OMx1;
+
+//Instancia MEM/MB
+MEM_WB MEM (
+
+	//Inp
+	OutMemD,
+	InpALU,
+	InpMx1,
+	CLK,
+
+	//Out
+	InpMemD,
+	OALU,
+	OMx1
+
+);
 
 //Instancia MXDP
 MxDP Last_Mx (
 
-	MtoR,
-	OutMemD,
-	OutALU,
+	OutWB3[0],
+	InpMemD,
+	OALU,
 	OutMx4,
 	
-	
-
 );
-
 
 endmodule 

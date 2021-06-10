@@ -20,6 +20,16 @@ module MxDP (
 //Case 1 = MI2
 
 //Bloque Always
-always @* RMx = SMx ? MI2:MI1;
+always @* begin        
+	
+	case ( SMx )
+
+		0: RMx = MI1;
+
+		1: RMx = MI2;
+
+	endcase
+
+end
 
 endmodule

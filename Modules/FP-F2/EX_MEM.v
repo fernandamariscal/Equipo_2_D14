@@ -10,10 +10,10 @@ module EX_MEM (
 	input MMemWrite,
 	*/
     input [31:0] addResult,
-    //input zero, 
+    input zero, 
 	input [31:0] ALUResult, 
 	input [31:0] readData2,
-    input [4:0] ExtoMemWB,
+    input [4:0] Mux_S2_1,
 	input Clk,
 	/*
 	input OutWBrw,
@@ -23,10 +23,10 @@ module EX_MEM (
 	output reg OutMemWrite,
 	*/
     output reg [31:0] OutAddResult,
-    //output reg Outzero,
+    output reg Outzero,
 	output reg [31:0] OutALUResult, 
 	output reg [31:0] OutReadData2,
-    output reg [4:0] OutExtoMemWB
+    output reg [4:0] OutMux_S2_1
 	
    
    
@@ -40,10 +40,10 @@ module EX_MEM (
 	OutMemWrite = MMemWrite; 
 	*/
     OutAddResult = addResult;
-   // Outzero = zero;
+    Outzero = zero;
     OutALUResult = ALUResult;
     OutReadData2 = readData2;
-    OutExtoMemWB = ExtoMemWB;
+    OutMux_S2_1 = Mux_S2_1;
   
    
     

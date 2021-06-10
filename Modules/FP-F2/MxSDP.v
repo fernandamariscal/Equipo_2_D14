@@ -20,6 +20,16 @@ module MxSDP (
 //Case 1 = MSI2
 
 //Bloque Always
-always @* RMxS = SMxS ? MSI2:MSI1;
+always @* begin        
+	
+	case ( SMxS )
+
+		0: RMxS = MSI1;
+
+		1: RMxS = MSI2;
+
+	endcase
+
+end
 
 endmodule
