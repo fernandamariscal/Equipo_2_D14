@@ -84,17 +84,21 @@ always @*
 					6'b100011: // LW
 					
 						IA = 4'b1101;
+						
+					6'b000100: // BEQ
+					
+						IA = 4'b1110;
 					
 					default:
 
-						IA = 3'dx;
+						IA = 4'dx;
 
 				endcase	
 			end
 
 			default:
 		
-				IA = 3'dx;
+				IA = 4'dx;
 
 		endcase
 

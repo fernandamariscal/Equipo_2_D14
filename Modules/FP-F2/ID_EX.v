@@ -25,21 +25,15 @@ module ID_EX (
 always @ (posedge Clk)
 begin
 		
-<<<<<<< HEAD
+
 	ADD1_EX = ADD1_ID;
 	RData1_Ex = RData1_ID;
 	RData2_Ex = RData2_ID;
 	SingExtend_Ex = SingExtend_ID;
 	Ins20_16_Ex = Ins20_16_ID;
 	Ins15_11_Ex = Ins15_11_ID;
-=======
-	ADD1_EX = ADD1_EX;
-	RData1_Ex = RData1_EX;
-	RData2_Ex = RData2_EX;
-	SingExtend_Ex = SingExtend_EX;
-	Ins20_16_Ex = Ins20_16_EX;
-	Ins15_11_Ex = Ins15_11_EX;
->>>>>>> dec31d34a9e3336c035505f1578e9283b1a1cd50
+
+
 		
 end
 

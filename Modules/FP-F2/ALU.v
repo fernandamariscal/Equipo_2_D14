@@ -58,13 +58,19 @@ begin //Inicio_A
 		
 		4'b1011: //12. ORI
 			R_Op = Op1 | 10 ;
-		
+		/*
 		4'b1100: //13. SW
-			R_Op = Op1 ;//+ offset;
+		//memory[GPR[base] + offset] = GPR[rt]
+			//Op2 = ;//base+ offset;
 			
 		4'b1101: //14. LW
-			R_Op = Op1; //+ offset;
+		//GPR[rt] = memory[GPR[base] + offset]
+			//Op2=  ; //+ offset;
 			
+		4'b1110: //14. BEQ
+		//GPR[rs] = GPR[rt] then branch
+		  //	Op1 = Op2 ; 
+			*/
 		default:
 			R_Op = 32'bx;
 	

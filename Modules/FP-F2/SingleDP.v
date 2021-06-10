@@ -75,6 +75,37 @@ wire Rw;
 
 /* MxDP [Inp] | MxDP [Out] */
 /* N/A */       wire [31:0]OutMx4;
+/*--------- SECCIÓN 3 ----- */
+
+//IF_ID [Inp]:
+/* N/A */
+
+//IF_ID [Out]:
+wire [31:0]OutAdd1IF_ID;
+wire [31:0]OutInsIF_ID;
+
+
+
+//ID_EX [Out]:
+
+wire [31:0]InpAdd1IF_ID;
+wire [31:0]Inprd1;
+wire [31:0]Inprd2;
+wire [31:0]InpEx;
+wire [4:0]InpIns1IF_ID;
+wire [4:0]InpIns2IF_ID;
+
+
+//EX_MEM [Inp]:
+
+//EX_MEM [Inp]:
+
+wire [31:0] Address;
+wire [31:0] WriteData;
+wire [4:0] OutMUX;
+
+//MEM_WB [Out]:
+wire [31:0] OutWriteData;
 
 //3- Cuerpo del modulo
 
@@ -110,6 +141,13 @@ IF_ID IF (
 	OutInsIF_ID
 
 );
+
+
+WB wb (   CLK, Rw, MtoR );
+M m (    CLK, Branch, MRead, MWrite);
+EX ex (    CLK, RegDs, AOp, ALUsrc);
+
+
 
 /*--------- SECCIÓN 1 ------ */
 
@@ -211,26 +249,29 @@ ID_EX ID (
 
 //Instacia EX/MEM
 EX_MEM EX(
-	
-	WB,
-	M,
-	Out,
-	Add,
+	OutAdd2,
+	OutALU,
+	Inprd2,
+	OutMx1,
+	CLK,
+	OutMx3,
+	Address,
 	WriteData,
-	Mux,
-	CLK
+	OutMUX,
+	
 
 );
 
 //Instancia MEM/MB
 MEM_WB MEM (
-
-	RegWrite,
-	OutMux2,
-	OutMux2,
-	OutMux2,
-	WriteRegister,
-	CLK 
+	Address,
+	WriteData,
+	OutMUX,
+	CLK,
+	OutMx4,
+	OutMx4,
+	OutWriteData
+	
 
 );
 
@@ -249,52 +290,11 @@ MxDP Last_Mx (
 	MtoR,
 	OutMemD,
 	OutALU,
-	OutMx4
+	OutMx4,
+	
+	
 
 );
 
-/*--------- SECCIÓN 3 ----- */
 
-//IF_ID [Inp]:
-/* N/A */
-
-//IF_ID [Out]:
-wire [31:0]OutAdd1IF_ID;
-wire [31:0]OutInsIF_ID;
-
-//ID_EX [Inp]:
-wire [31:0]OutInsIF_ID;
-
-//ID_EX [Out]:
-wire InpRegDs;
-wire InpBranch;
-wire InpMRead;
-wire InpMtoR;
-wire [2:0]InpAOp;
-wire InpMWrite;
-wire InpALUsrc;
-wire InpRw;
-wire [31:0]InpAdd1IF_ID;
-wire [31:0]Inprd1;
-
-wire [31;0]Inprd1;
-wire [31:0]Inprd2;
-wire [31:0]InpEx;
-wire [4:0]InpIns1IF_ID;
-wire [4:0]InpIns2IF_ID;
-
-
-//EX_MEM [Inp]:
-wire WB;
-wire M;
-
-//EX_MEM [Inp]:
-wire InpWB;
-wire InpM;
-wire MemWrite;
-wire MemRead;
-wire [31:0]MemAddress;
-wire [31:0]WriteData;
-wire [4:0]ExtoMemWB;
-
-endmodule
+endmodule 

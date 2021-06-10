@@ -29,14 +29,12 @@ always @*
 	
 		case (UIn)
 
-			6'b000000: //Op 1
-<<<<<<< HEAD
+			6'b000000: //TIPE-R
+
 				
 				begin
 				
-=======
 
->>>>>>> dec31d34a9e3336c035505f1578e9283b1a1cd50
 				RegDs = 1'b1;
 				Branch = 1'b0;
 				MRead = 1'b0;
@@ -47,6 +45,48 @@ always @*
 				Urw = 1'b1;
 				
 				end  //}
+				
+			6'b100011: begin//LW
+			
+				RegDs = 1'b0;
+				Branch = 1'b0;
+				MRead = 1'b1;
+				MtoR = 1'b1;
+				AOp = 3'b000;
+				MWrite = 1'b0;
+				ALUsrc = 1'b1;
+				Urw = 1'b1;
+				
+				end
+				
+			6'b101011: begin//SW
+			
+				RegDs = 1'bx;
+				Branch = 1'b0;
+				MRead = 1'b0;
+				MtoR = 1'bx;
+				AOp = 3'b000;
+				MWrite = 1'b1;
+				ALUsrc = 1'b1;
+				Urw = 1'b0;
+				
+				end
+				
+						
+						
+			6'b000100: begin//BEQ
+			
+				RegDs = 1'bx;
+				Branch = 1'b1;
+				MRead = 1'b0;
+				MtoR = 1'bx;
+				AOp = 3'b001;
+				MWrite = 1'b0;
+				ALUsrc = 1'b0;
+				Urw = 1'b0;
+				
+				end 
+				
 
 			default:
 
@@ -83,8 +123,6 @@ always @*
 
 		*/
 
-<<<<<<< HEAD
+
 endmodule 
-=======
-endmodule
->>>>>>> dec31d34a9e3336c035505f1578e9283b1a1cd50
+
