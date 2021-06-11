@@ -84,6 +84,7 @@ always @*
 					3'b110: // ORI
 					
 						IA = 3'b100;
+						
 						/*
 					3'b001: // SW
 					
@@ -98,8 +99,6 @@ always @*
 						IA = 3'b110;
 					*/
 					
-
-			
 			default:
 		
 				IA = 4'dx;
