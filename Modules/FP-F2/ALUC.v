@@ -68,7 +68,6 @@ always @*
 						endcase	
 			end 
 
-					
 			3'b011: //ADDI | LW | SW
 					
 				IA = 3'b000;
