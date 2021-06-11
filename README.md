@@ -1,4 +1,4 @@
-## Final_Projet.
+﻿## Final_Projet.
 
 * This repository contains our final project.
 
@@ -11,10 +11,19 @@
 <li> De La Cruz Chavarria Christian Israel | <strong>H-Designer</strong>.</li>
 </ol>
 
+# Members | Phase 2.
+ 
+<ol>
+<li>Oscar Beltran Villegas | <strong>Scripter</strong>.</li>
+<li>Mariscal Viorato Maria Fernanda | <strong>Documenter</strong>.</li>
+<li>Ramírez Vázquez Ezequiel Alberto | <strong>H-Designer</strong>.</li>
+<li> De La Cruz Chavarria Christian Israel | <strong>Admin</strong>.</li>
+</ol>
+
 ## Commands to use git.
 
 * '***git status***' to view your repo status.
-* '***git add***' to add files what you whant upload to changes.
+* '***git add***' to add files what you want upload to changes.
 * '***git commit -m "tag"***' to put a tag in your changes.
 * '***git push***' to upload your changes to origin/master repo.
 
