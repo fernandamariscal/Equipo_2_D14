@@ -28,6 +28,10 @@ always @* begin
 
 		1: RMxS = MSI2;
 
+	default:
+
+		RMx = x;
+		
 	endcase
 
 end
