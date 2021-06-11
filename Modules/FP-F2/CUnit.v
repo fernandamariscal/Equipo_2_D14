@@ -52,7 +52,7 @@ always @*
 				Branch = 1'b0;
 				MRead = 1'b1;
 				MtoR = 1'b1;
-				AOp = 3'b000;
+				AOp = 3'b011;
 				MWrite = 1'b0;
 				ALUsrc = 1'b1;
 				Urw = 1'b1;
@@ -65,13 +65,12 @@ always @*
 				Branch = 1'b0;
 				MRead = 1'b0;
 				MtoR = 1'bx;
-				AOp = 3'b000;
+				AOp = 3'b011;
 				MWrite = 1'b1;
 				ALUsrc = 1'b1;
 				Urw = 1'b0;
 				
 				end
-				
 						
 						
 			6'b000100: begin//BEQ
