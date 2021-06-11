@@ -19,4 +19,4 @@ module ADD (
 //Assign:
 assign ARes = AIn1 + AIn2;
 
-endmodule
+endmodule 

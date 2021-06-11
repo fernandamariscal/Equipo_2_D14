@@ -21,8 +21,8 @@ reg [7:0] IM [0:399];
 initial
 
 	begin
-		$readmemb("TestF1_IMem",IM);
-		/*$readmemb("TestF2_MemInst.mem",IM);*/
+		//$readmemb("TestF1_IMem",IM);
+		$readmemb("TestF2_MemInst.mem",IM);
 
 	end
 

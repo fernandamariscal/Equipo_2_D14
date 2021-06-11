@@ -63,7 +63,7 @@ always @*
 						
 						default:
 
-						IA = 4'dx;
+						IA = 3'dx;
 						
 						endcase	
 			end 
@@ -101,7 +101,7 @@ always @*
 					
 			default:
 		
-				IA = 4'dx;
+				IA = 3'dx;
 
 		endcase
 
