@@ -61,7 +61,7 @@ always @*
 				
 			6'b101011: begin//SW
 			
-				RegDs = 1'b0;
+				RegDs = 1'b1;
 				Branch = 1'b0;
 				MRead = 1'b0;
 				MtoR = 1'bx;
