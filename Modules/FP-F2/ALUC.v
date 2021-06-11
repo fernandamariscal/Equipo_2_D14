@@ -67,7 +67,7 @@ always @*
 						
 						endcase	
 			end 
-
+					
 					
 					3'b011: //ADDI
 					
@@ -84,6 +84,7 @@ always @*
 					3'b110: // ORI
 					
 						IA = 3'b100;
+						
 						
 						/*
 					3'b001: // SW
@@ -107,4 +108,4 @@ always @*
 
 	end
 
-endmodule
+endmodule 
