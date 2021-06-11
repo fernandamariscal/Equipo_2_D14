@@ -28,7 +28,7 @@ always @* begin
 
 		1: RMx = MI2;
 
-	default:git 
+	default:
 
 		RMx = 5'bx;
 
@@ -36,4 +36,4 @@ always @* begin
 
 end
 
-endmodule
+endmodule 
