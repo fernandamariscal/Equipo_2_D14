@@ -16,7 +16,7 @@ always@(posedge Clk)
 begin
 
 	OutADD1 = ADD1IF;
-	OutInsIF = OutInsIF;
+	OutInsIF = InsIF;
 
 end
 

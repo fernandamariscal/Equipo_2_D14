@@ -157,7 +157,6 @@ always @*
 				
 				end  //}
 				
-
 			default:
 
 				begin  //{

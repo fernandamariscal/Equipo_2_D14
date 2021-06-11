@@ -23,7 +23,7 @@ module MEM_WB(
 	//OutMemtoReg = MemtoReg;
     OutReadData = ReadData;
     OutAluResult = AluResult;
-    OutMux =Mux;
+    OutMux = Mux;
    
     end 
 endmodule 

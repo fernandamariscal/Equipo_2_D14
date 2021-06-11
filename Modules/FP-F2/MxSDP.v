@@ -30,7 +30,7 @@ always @* begin
 
 	default:
 
-		RMx = x;
+		RMxS = 5'bx;
 		
 	endcase
 

@@ -26,7 +26,7 @@ initial
 	$dumpfile("Phase 1");
 	$dumpvars(0, TB_SingleDP);
 
-	CLK <= 0; #1200
+	CLK <= 0; #3000
 
 	$stop;
 

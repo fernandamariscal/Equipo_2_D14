@@ -33,12 +33,7 @@ module EX_MEM (
 );
     always @(posedge Clk)
     begin
-	/*
-	OutWBrw = WBrw;
-	OutBranch = MBranch;
-	OutMemRead = MMemRead;
-	OutMemWrite = MMemWrite; 
-	*/
+	
     OutAddResult = addResult;
     Outzero = zero;
     OutALUResult = ALUResult;
