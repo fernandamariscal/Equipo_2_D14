@@ -21,6 +21,11 @@ initial		/*In 01*/ PDi = 32'b0;
 //Bloque Always
 always @ (posedge PClk)	
 
+
+	if (NDi)
 	PDi = NDi;
+	else
+	PDi = 32'b0; 
+	
 
 endmodule

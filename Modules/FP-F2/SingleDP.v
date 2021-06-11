@@ -350,7 +350,7 @@ MxDP Last_Mx (
 	OutWB3[0],
 	InpMemD,
 	OALU,
-	OutMx4,
+	OutMx4
 	
 );
 
