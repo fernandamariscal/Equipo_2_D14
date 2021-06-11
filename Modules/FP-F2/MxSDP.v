@@ -28,9 +28,9 @@ always @* begin
 
 		1: RMxS = MSI2;
 
-	default:
+//	default:
 
-		RMxS = 5'bx;
+	//	RMxS = 5'bx;
 		
 	endcase
 

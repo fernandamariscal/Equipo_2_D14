@@ -28,9 +28,9 @@ always @* begin
 
 		1: RMx = MI2;
 
-	default:
+	//default:
 
-		RMx = 5'bx;
+	//	RMx = 5'bx;
 
 	endcase
 
