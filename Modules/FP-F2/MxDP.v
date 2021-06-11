@@ -28,6 +28,10 @@ always @* begin
 
 		1: RMx = MI2;
 
+	default:
+
+		RMx = 5'bx;
+
 	endcase
 
 end
