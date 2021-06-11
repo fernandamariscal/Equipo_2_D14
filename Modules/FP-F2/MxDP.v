@@ -28,7 +28,7 @@ always @* begin
 
 		1: RMx = MI2;
 
-	default:
+	default:git 
 
 		RMx = 5'bx;
 
