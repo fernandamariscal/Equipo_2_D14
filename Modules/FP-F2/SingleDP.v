@@ -185,7 +185,7 @@ IF_ID IF (
 //Instancia CUnit
 CUnit cunit ( 
 	
-	OutIns[31:26],	
+	OutInsIF_ID[31:26],	
 	RegDs,
 	Branch,
 	MRead,
