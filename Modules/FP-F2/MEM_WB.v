@@ -14,8 +14,8 @@ module MEM_WB(
 	output reg OutMemtoReg,
 	*/
     output reg [31:0] OutReadData,
-    output reg [4:0] OutAluResult,
-    output reg OutMux
+    output reg [31:0] OutAluResult,
+    output reg [4:0]OutMux
 );
     always @(posedge Clk)
     begin

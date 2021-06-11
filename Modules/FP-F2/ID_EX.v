@@ -23,6 +23,7 @@ module ID_EX (
 );
 
 always @ (posedge Clk)
+
 begin
 		
 

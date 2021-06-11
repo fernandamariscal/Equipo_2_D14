@@ -137,9 +137,6 @@ wire [4:0]InpIns1IF_ID;
 wire [4:0]InpIns2IF_ID;
 
 
-//MEM_WB [Out]:
-wire [31:0] OutWriteData;
-
 //3- Cuerpo del modulo
 
 //Instancias
@@ -265,7 +262,7 @@ SL2 preadd_s2_1 ( InpExt, OutShift );
 MxDP PreALU ( OutEX1[0], Inprd2, InpExt, OutMx2 );
 
 //Instancia ALUC
-ALUC A_Control ( InpExt, OutEX1[3:1], OutALUC ); 
+ALUC A_Control ( InpExt[5:0], OutEX1[3:1], OutALUC ); 
 
 //Instancia ALU
 ALU alu ( Inprd1, OutMx2, OutALUC, ZF, OutALU );
@@ -289,10 +286,10 @@ MxSDP Mux_s2_1 (
 /*--------- SECCIÓN 3 ----- */
 
 //Instancia WB
-WB wb_s3 ( OutWB1, OutWB2 );
+WB wb_s3 ( OutWB1, CLK,  OutWB2 );
 
 //Instancia M
-M m_s3 ( OutM1, OutM2 );
+M m_s3 ( OutM1,CLK,  OutM2 );
 
 
 //Instacia EX/MEM
@@ -328,7 +325,7 @@ DMem rom (
 
 
 //Instancia WB
-WB wb_s3_2 ( OutWB2, OutWB3 );
+WB wb_s3_2 ( OutWB2,CLK,  OutWB3 );
 
 
 //Instancia MEM/MB
