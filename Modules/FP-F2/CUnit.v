@@ -61,12 +61,12 @@ always @*
 				
 			6'b101011: begin//SW
 			
-<<<<<<< HEAD
+
 				RegDs = 1'b1;
-=======
+
 				//RegDs = 1'bx;
 				RegDs = 1'b0;
->>>>>>> bfeb264b2dc551d98318e948b6ea79d195c2760b
+
 				Branch = 1'b0;
 				MRead = 1'b0;
 				//MtoR = 1'bx;
@@ -86,7 +86,7 @@ always @*
 				Branch = 1'b1;
 				MRead = 1'b0;
 				//MtoR = 1'bx;
-				MtoR = 1'bx;
+				MtoR = 1'b0;
 				AOp = 3'b001;
 				MWrite = 1'b0;
 				ALUsrc = 1'b0;

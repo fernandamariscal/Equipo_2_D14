@@ -5,7 +5,7 @@ module SingleDP (
 		
 		//Entradas
 		input CLK
-		
+	
 );
 
 //2- Delcaracion de señales.
@@ -148,6 +148,7 @@ wire [4:0]InpIns2IF_ID;
 MxDP prepc (
 
 	(OutM2[2] && InpZF), OutAdd1,
+	
 	InpAdd2, OutMx3
 
 );
@@ -212,7 +213,7 @@ BankR Bank (
  );
 
 //Instancia SingE
-SignE Extensor ( OutIns[15:0], OutExt );
+SignE Extensor ( OutInsIF_ID[15:0], OutExt );
 
 //Instancia WB
 WB wb_s2 ( { MtoR, Rw }, CLK, OutWB1 );
@@ -252,11 +253,11 @@ ID_EX ID (
 
 /*-------- SECCIÓN 2.1 ----- */
 
-//Instancia ADD
-ADD add_s2_1 ( InpAdd1IF_ID , OutShift, OutAdd2 );
-
 //Instancia SL2
 SL2 preadd_s2_1 ( InpExt, OutShift );
+
+//Instancia ADD
+ADD add_s2_1 ( InpAdd1IF_ID , OutShift, OutAdd2 );
 
 //Instancia MxSDP
 MxDP PreALU ( OutEX1[0], Inprd2, InpExt, OutMx2 );
