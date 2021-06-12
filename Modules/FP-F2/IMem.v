@@ -20,7 +20,7 @@ reg [7:0] IM [0:399];
 //Pre-Charge Reading.
 initial
 
-	begin
+	begin 
 		//$readmemb("TestF1_IMem",IM);
 		$readmemb("TestF2_MemInst.mem",IM);
 
