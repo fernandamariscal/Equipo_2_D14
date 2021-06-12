@@ -97,7 +97,7 @@ always @*
 				Urw = 1'b1;
 				
 				end  //}
-				
+		
 				
 						
 			6'b001101: //ORI
