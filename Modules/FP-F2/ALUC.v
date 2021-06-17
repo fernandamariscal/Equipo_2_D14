@@ -69,17 +69,24 @@ always @*
 			end 
 
 
-			3'b011: //ADDI | LW | SW
+			3'b011: //ADDI Funciona    SW | LW 
 				IA = 3'b000;
-					
-			3'b100: // SLTI
+				
+			3'b100: // SLTI Funciona
 				IA = 3'b110;
-						
-			3'b101: // ANDI	
+				
+			3'b101: // ANDI	Funciona
 				IA = 3'b101;
 				
 			3'b110: // ORI
 				IA = 3'b100;
+				
+			3'b111: // SW
+				IA = 3'b000;
+			
+			3'b000: // LW 
+			
+				IA = 3'b000;
 						
 			3'b001: // BEQ	
 				IA = 3'b001;
