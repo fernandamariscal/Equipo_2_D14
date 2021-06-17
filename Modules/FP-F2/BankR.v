@@ -45,6 +45,10 @@ begin //Inicio_A
 
 		BReg[Dir] <= DIn;
 
+
+//Test
+$display ( " Rw[%d]; Rd1[%d]: %d; Rd2[%d]: %d; Din[%d]; BReg[%d]: %d;",Rw,Rd1,L1,Rd2,L2,DIn,Dir,BReg[Dir] );
+
 end
 
 
