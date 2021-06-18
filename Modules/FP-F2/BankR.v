@@ -47,7 +47,7 @@ begin //Inicio_A
 
 
 //Test
-$display ( " Rw[%d]; Rd1[%d]: %d; Rd2[%d]: %d; Din[%d]; BReg[%d]: %d;",Rw,Rd1,L1,Rd2,L2,DIn,Dir,BReg[Dir] );
+//$display ( " Rw[%d]; Rd1[%d]: %d; Rd2[%d]: %d; Din[%d]; BReg[%d]: %d;",Rw,Rd1,L1,Rd2,L2,DIn,Dir,BReg[Dir] );
 
 end
 

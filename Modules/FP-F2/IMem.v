@@ -23,7 +23,7 @@ initial
 	begin 
 	//	$readmemb("TestF1_IMem",IM);
 		//$readmemb("TestF2_MemInst.mem",IM);
-		$readmemb("test21",IM);
+		$readmemb("test21",IM); 
     
 	end
 

@@ -54,7 +54,7 @@ begin //Inicio_A
 
 	//Flag
 	ZF <= (R_Op) ? 0:1;
-
+//$display ( " Op1[%d]; Op2[%d]; S_Op[%d]; ZF[%d]; R_Op[%d];  ",Op1,Op2,S_Op,ZF,R_Op); 
 end //Fin_A
 
 endmodule

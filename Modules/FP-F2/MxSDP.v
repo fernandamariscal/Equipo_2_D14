@@ -13,7 +13,7 @@ module MxSDP (
 );
 
 //2- Delcaracion de señales --> NA(No aplica)
-
+  
 //3- Cuerpo del modulo
 
 //Case 0 = MSI1
