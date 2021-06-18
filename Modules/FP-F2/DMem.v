@@ -34,9 +34,13 @@ always @*
 			
 			end
 		
-		else //Reading
+		if (Erd == 1) //Reading
+
+			begin
 
 			MOut = Mem[Addr];
+
+			end
 			
 $display ( " Ewr[%d]; Addr[%d] ; RDir[%d]; Erd[%d]; MOut[%d]; Mem[%d]; ",Ewr,Addr,RDir,Erd,MOut,Mem[Addr]);
 	
