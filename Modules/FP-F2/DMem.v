@@ -28,7 +28,7 @@ always @*
 		if (Ewr == 1) //Writting
 
 			begin
-			
+			 
 			Mem[Addr] = RDir;
 			MOut = 32'bx;
 			
