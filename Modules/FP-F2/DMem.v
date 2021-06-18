@@ -37,7 +37,8 @@ always @*
 		else //Reading
 
 			MOut = Mem[Addr];
-
+			
+$display ( " Ewr[%d]; Addr[%d] ; RDir[%d]; Erd[%d]; MOut[%d];",Ewr,Addr,RDir,Erd,MOut, Mem[RDir]);
 	end
 
 endmodule

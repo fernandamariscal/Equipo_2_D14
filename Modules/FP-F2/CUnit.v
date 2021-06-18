@@ -147,7 +147,7 @@ always @*
 				MtoR = 1'b1;
 				AOp = 3'b000;
 				MWrite = 1'b0;
-				ALUsrc = 1'b1;
+				ALUsrc = 1'b0;
 				Urw = 1'b1;
 				
 				end
