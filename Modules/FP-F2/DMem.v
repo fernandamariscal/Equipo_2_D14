@@ -42,7 +42,7 @@ always @*
 
 			end
 			
-$display ( " Ewr[%d]; Addr[%d] ; RDir[%d]; Erd[%d]; MOut[%d]; Mem[%d]; ",Ewr,Addr,RDir,Erd,MOut,Mem[Addr]);
+//$display ( " Ewr[%d]; Addr[%d] ; RDir[%d]; Erd[%d]; MOut[%d]; Mem[%d]; ",Ewr,Addr,RDir,Erd,MOut,Mem[Addr]);
 	
 	end
 

@@ -144,7 +144,7 @@ always @*
 				RegDs = 1'b0;
 				Branch = 1'b0;
 				MRead = 1'b1;
-				MtoR = 1'b1;
+				MtoR = 1'b0;
 				AOp = 3'b011;
 				MWrite = 1'b0;
 				ALUsrc = 1'b1;

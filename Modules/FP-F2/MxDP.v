@@ -33,7 +33,7 @@ always @* begin
 	//	RMx = 5'bx;
 
 	endcase
-
+//$display ( " SMx[%d]; MI1[%d]; MI2[%d]; RMx[%d]; ",SMx,MI1,MI2,RMx); 
 end
 
 endmodule 
