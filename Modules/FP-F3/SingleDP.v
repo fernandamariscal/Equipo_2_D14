@@ -349,8 +349,8 @@ MEM_WB MEM (
 MxDP Last_Mx (
 
 	OutWB3[0],
-	OALU,
 	InpMemD,
+	OALU,
 	OutMx4
 	
 );
