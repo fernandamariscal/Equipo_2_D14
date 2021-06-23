@@ -3,16 +3,17 @@
 module M (
 			
 			//Inp
-			input [2:0] M,
+			input [3:0] M,
 			input Clk,
 			
 			//Out
-		    output reg [2:0] OutM
+		    output reg [3:0] OutM
 );
 
 /*	
 		
 	M /////////////
+	Jump = 1'b0;
 	Branch = 1'b0;
 	MRead = 1'b0;
 	MWrite = 1'b0;

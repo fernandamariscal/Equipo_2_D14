@@ -1,0 +1,156 @@
+C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALU.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_SingleDP
+
+Top level modules:
+	TB_SingleDP
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/PC.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/PC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/CUnit.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/CUnit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module CUnit
+
+Top level modules:
+	CUnit
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX_MEM.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX_MEM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EX_MEM
+
+Top level modules:
+	EX_MEM
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IF_ID.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IF_ID.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IF_ID
+
+Top level modules:
+	IF_ID
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALUC.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALUC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALUC
+
+Top level modules:
+	ALUC
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EX
+
+Top level modules:
+	EX
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingE.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingE.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SignE
+
+Top level modules:
+	SignE
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IMem.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IMem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IMem
+
+Top level modules:
+	IMem
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ADD.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ADD.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ADD
+
+Top level modules:
+	ADD
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/DMem.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/DMem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module DMem
+
+Top level modules:
+	DMem
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxSDP.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxSDP.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MxSDP
+
+Top level modules:
+	MxSDP
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/M.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/M.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module M
+
+Top level modules:
+	M
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingleDP.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingleDP.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SingleDP
+
+Top level modules:
+	SingleDP
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/BankR.v {2 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/BankR.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module BankR
+** Warning: C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/BankR.v(41): (vlog-2182) 'BReg' might be read before written in always_comb or always @* block.
+
+Top level modules:
+	BankR
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MEM_WB.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MEM_WB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MEM_WB
+
+Top level modules:
+	MEM_WB
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ID_EX.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ID_EX.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ID_EX
+
+Top level modules:
+	ID_EX
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxDP.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxDP.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MxDP
+
+Top level modules:
+	MxDP
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/Sl_3.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/Sl_3.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sl_3
+
+Top level modules:
+	Sl_3
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SL2.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SL2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SL2
+
+Top level modules:
+	SL2
+
+} {} {}} C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/WB.v {1 {vlog -work jump -stats=none C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/WB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module WB
+
+Top level modules:
+	WB
+
+} {} {}}

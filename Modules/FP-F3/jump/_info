@@ -1,0 +1,539 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/WINDOWS/system32
+vADD
+Z0 !s110 1624422778
+!i10b 1
+!s100 >VdK>1=H@?LTNPm[_3RPo3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IbHVNe6bQWFc]jG?aQjj=Q2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3
+Z4 w1624027246
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ADD.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ADD.v
+!i122 243
+L0 5 18
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1624422778.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ADD.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ADD.v|
+!i113 1
+Z7 o-work jump
+Z8 tCvgOpt 0
+n@a@d@d
+vALU
+R0
+!i10b 1
+!s100 >7F3bMoiNBbmXbP3CSaZK1
+R1
+Ig69iO`ikh35mXNUic8LWh0
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALU.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALU.v
+!i122 244
+L0 4 57
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALU.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALU.v|
+!i113 1
+R7
+R8
+n@a@l@u
+vALUC
+!s110 1624422779
+!i10b 1
+!s100 3E[leDR0kS>`GlWeP_@lS1
+R1
+IUTdPib4UickeGL:m@S[GJ0
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALUC.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALUC.v
+!i122 245
+L0 4 99
+R5
+r1
+!s85 0
+31
+Z9 !s108 1624422779.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALUC.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ALUC.v|
+!i113 1
+R7
+R8
+n@a@l@u@c
+vBankR
+Z10 !s110 1624422780
+!i10b 1
+!s100 GWjSf3eO>Ajo9K1gdnl361
+R1
+I`8BXC<@8zRfNAobNj@AIQ0
+R2
+R3
+w1624415464
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/BankR.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/BankR.v
+!i122 246
+L0 4 52
+R5
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/BankR.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/BankR.v|
+!i113 1
+R7
+R8
+n@bank@r
+vCUnit
+R10
+!i10b 1
+!s100 ShJ=oDVD;a67io_`2dBL<3
+R1
+I`MQz?RnKl<J^a^Oj<CY4B1
+R2
+R3
+w1624410590
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/CUnit.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/CUnit.v
+!i122 247
+L0 4 237
+R5
+r1
+!s85 0
+31
+Z11 !s108 1624422780.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/CUnit.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/CUnit.v|
+!i113 1
+R7
+R8
+n@c@unit
+vDMem
+Z12 !s110 1624422781
+!i10b 1
+!s100 dGZkoi7zFln`?TT`8PhjR1
+R1
+IWEFOL38DfnnW?cQ^zWHlR0
+R2
+R3
+Z13 w1624234900
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/DMem.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/DMem.v
+!i122 248
+L0 4 46
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/DMem.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/DMem.v|
+!i113 1
+R7
+R8
+n@d@mem
+vEX
+R12
+!i10b 1
+!s100 7WR<[@jF6[@6_BPM7LL^D3
+R1
+I^Yjcb=2Jbei7_>nSOf<i42
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX.v
+!i122 249
+Z14 L0 3 27
+R5
+r1
+!s85 0
+31
+Z15 !s108 1624422781.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX.v|
+!i113 1
+R7
+R8
+n@e@x
+vEX_MEM
+R12
+!i10b 1
+!s100 `bfFRB1j?SO:d7@Z;m3UN0
+R1
+IjcGEQk68Db8dC>z>J?`6W3
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX_MEM.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX_MEM.v
+!i122 250
+L0 4 44
+R5
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX_MEM.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/EX_MEM.v|
+!i113 1
+R7
+R8
+n@e@x_@m@e@m
+vID_EX
+!s110 1624422782
+!i10b 1
+!s100 <>e]AXlX@di`_91hP@eFd2
+R1
+If3KgmHhQ8f79LQHUhb4a<2
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ID_EX.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ID_EX.v
+!i122 251
+L0 4 38
+R5
+r1
+!s85 0
+31
+Z16 !s108 1624422782.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ID_EX.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/ID_EX.v|
+!i113 1
+R7
+R8
+n@i@d_@e@x
+vIF_ID
+Z17 !s110 1624422783
+!i10b 1
+!s100 25Sj8XOAnE_Gh]Waio<lm0
+R1
+Igc4lUB1VdV0FfHLDTMAoH0
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IF_ID.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IF_ID.v
+!i122 252
+L0 3 21
+R5
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IF_ID.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IF_ID.v|
+!i113 1
+R7
+R8
+n@i@f_@i@d
+vIMem
+R17
+!i10b 1
+!s100 go9=mDd_Wg3AkHDddLT;z1
+R1
+Ihde=3I<e3Tk7C1VX^CY^:0
+R2
+R3
+w1624415500
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IMem.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IMem.v
+!i122 253
+Z18 L0 4 36
+R5
+r1
+!s85 0
+31
+Z19 !s108 1624422783.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IMem.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/IMem.v|
+!i113 1
+R7
+R8
+n@i@mem
+vM
+Z20 !s110 1624422784
+!i10b 1
+!s100 0@bh]zXjUS62aH=n_B9EL3
+R1
+IF>ZanD8;HKc`?75jhj]G01
+R2
+R3
+w1624410698
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/M.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/M.v
+!i122 254
+L0 3 28
+R5
+r1
+!s85 0
+31
+R19
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/M.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/M.v|
+!i113 1
+R7
+R8
+n@m
+vMEM_WB
+R20
+!i10b 1
+!s100 <UE_MznzFV1gFWCcMIMi21
+R1
+IlX>1k<G^7c2Zi>j1ddkk52
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MEM_WB.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MEM_WB.v
+!i122 255
+R14
+R5
+r1
+!s85 0
+31
+Z21 !s108 1624422784.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MEM_WB.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MEM_WB.v|
+!i113 1
+R7
+R8
+n@m@e@m_@w@b
+vMxDP
+Z22 !s110 1624422785
+!i10b 1
+!s100 LNlbGeYG?;UdKT_gYVEmK3
+R1
+I8A:FoRHJUzY^H4ZmV`gT82
+R2
+R3
+w1624407698
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxDP.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxDP.v
+!i122 256
+R18
+R5
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxDP.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxDP.v|
+!i113 1
+R7
+R8
+n@mx@d@p
+vMxSDP
+R22
+!i10b 1
+!s100 125Qi<Q<XC1KYQfTg^WLc2
+R1
+IYO8@RieSK0jQ8zH^F0@[T1
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxSDP.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxSDP.v
+!i122 257
+R18
+R5
+r1
+!s85 0
+31
+Z23 !s108 1624422785.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxSDP.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/MxSDP.v|
+!i113 1
+R7
+R8
+n@mx@s@d@p
+vPC
+R22
+!i10b 1
+!s100 >20PcH[8iLI9gemfWLE4G0
+R1
+IXTWTXBeEIB5K74<:CfSb91
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/PC.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/PC.v
+!i122 258
+L0 4 28
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/PC.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/PC.v|
+!i113 1
+R7
+R8
+n@p@c
+vSignE
+Z24 !s110 1624422786
+!i10b 1
+!s100 ;^0bO;5aLkDG6QXZOBj4l3
+R1
+IRcf@GD:C3jm]=LkBeZ<X_2
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingE.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingE.v
+!i122 259
+L0 4 24
+R5
+r1
+!s85 0
+31
+Z25 !s108 1624422786.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingE.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingE.v|
+!i113 1
+R7
+R8
+n@sign@e
+vSingleDP
+R24
+!i10b 1
+!s100 gIcX;zgj_CQjJa9obVZ3i1
+R1
+Ilc2UVj`@>b;W^b9fU[WSI2
+R2
+R3
+w1624413099
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingleDP.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingleDP.v
+!i122 260
+L0 4 372
+R5
+r1
+!s85 0
+31
+R25
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingleDP.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SingleDP.v|
+!i113 1
+R7
+R8
+n@single@d@p
+vSL2
+Z26 !s110 1624422788
+!i10b 1
+!s100 c=PYHANDcEF@o9Z6=DV3i0
+R1
+IT4N:HMklTI6^cJRAK9RWg3
+R2
+R3
+w1624407726
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SL2.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SL2.v
+!i122 262
+Z27 L0 4 18
+R5
+r1
+!s85 0
+31
+Z28 !s108 1624422787.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SL2.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/SL2.v|
+!i113 1
+R7
+R8
+n@s@l2
+vSl_3
+!s110 1624422787
+!i10b 1
+!s100 N3nE@RFhY`ZbCe]``L@M@1
+R1
+Ilf=8gHAVhMHEa8@bmYhj20
+R2
+R3
+w1624413237
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/Sl_3.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/Sl_3.v
+!i122 261
+R27
+R5
+r1
+!s85 0
+31
+R28
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/Sl_3.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/Sl_3.v|
+!i113 1
+R7
+R8
+n@sl_3
+vTB_SingleDP
+R26
+!i10b 1
+!s100 [I>lK3M_dnDQaVMbACL^L0
+R1
+I<G<T5C7k4am<zRjQo@?bW2
+R2
+R3
+R13
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v
+!i122 263
+L0 4 32
+R5
+r1
+!s85 0
+31
+Z29 !s108 1624422788.000000
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v|
+!i113 1
+R7
+R8
+n@t@b_@single@d@p
+vWB
+!s110 1624422789
+!i10b 1
+!s100 hL^TZ8aW;zL;;f@a:=9WV0
+R1
+INm<0IC2;AB_zMZ5I=;Ce]1
+R2
+R3
+R4
+8C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/WB.v
+FC:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/WB.v
+!i122 264
+L0 3 26
+R5
+r1
+!s85 0
+31
+R29
+!s107 C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/WB.v|
+!s90 -reportprogress|300|-work|jump|-stats=none|C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/WB.v|
+!i113 1
+R7
+R8
+n@w@b

@@ -13,7 +13,8 @@ module CUnit (
 		output reg [2:0]AOp,
 		output reg MWrite,
 		output reg ALUsrc,
-		output reg Urw
+		output reg Urw,
+		output reg Jump
 );
 
 //2- Delcaracion de señales --> NA(No aplica)
@@ -43,6 +44,7 @@ always @*
 				MWrite = 1'b0;
 				ALUsrc = 1'b0;
 				Urw = 1'b1;
+				Jump = 1'b0;
 				
 				end  //}
 				
@@ -60,7 +62,7 @@ always @*
 				MWrite = 1'b0;
 				ALUsrc = 1'b1;
 				Urw = 1'b1;
-				
+				Jump = 1'b0;
 				end  //}
 				
 				6'b001010: //SLTI
@@ -77,7 +79,7 @@ always @*
 				MWrite = 1'b0;
 				ALUsrc = 1'b1;
 				Urw = 1'b1;
-				
+				Jump = 1'b0;
 				end  //}
 				
 				
@@ -95,6 +97,7 @@ always @*
 				MWrite = 1'b0;
 				ALUsrc = 1'b1;
 				Urw = 1'b1;
+				Jump = 1'b0;
 				
 				end  //}
 		
@@ -114,6 +117,7 @@ always @*
 				MWrite = 1'b0;
 				ALUsrc = 1'b1;
 				Urw = 1'b1;
+				Jump = 1'b0;
 				
 				end  //}
 				
@@ -133,6 +137,7 @@ always @*
 				MWrite = 1'b1;
 				ALUsrc = 1'b1;
 				Urw = 1'b0;
+				Jump = 1'b0;
 				
 				end
 						
@@ -149,6 +154,7 @@ always @*
 				MWrite = 1'b0;
 				ALUsrc = 1'b1;
 				Urw = 1'b1;
+				Jump = 1'b0;
 				
 				end
 				
@@ -166,7 +172,7 @@ always @*
 				MWrite = 1'b0;
 				ALUsrc = 1'b0;
 				Urw = 1'b0;
-				
+				Jump = 1'b0;
 				end 
 				
 				
@@ -188,8 +194,27 @@ always @*
 				MWrite = 1'bx;
 				ALUsrc = 1'bx;
 				Urw = 1'bx;
-				
+				Jump = 1'bx;
 				end//}
+
+
+			6'b000010: //JUMP
+
+				
+				begin
+				
+
+				RegDs = 1'bx;
+				Branch = 1'b0;
+				MRead = 1'bx;
+				MtoR = 1'bx;
+				AOp = 3'bx;
+				MWrite = 1'bx;
+				ALUsrc = 1'bx;
+				Urw = 1'bx;
+				Jump = 1'b1;
+				
+				end  //}
 
 		endcase
 

@@ -33,6 +33,9 @@ wire [2:0]AOp;
 wire MWrite;
 wire ALUsrc;
 wire Rw;
+wire Jump;
+wire [27:0]OutShiftjump;
+wire [31:0]OutMux5;
 
 /*MxDP [Inp] | MxSDP [Out] */
 /* N/A */      wire [4:0]OutMx1;
@@ -80,7 +83,7 @@ wire Rw;
 /* N/A */       wire [1:0]OutWB1;
 
 /* M 1 [Inp] | M 1 [Out] */
-/* N/A */      wire [2:0]OutM1;
+/* N/A */      wire [3:0]OutM1;
 
 /* EX 1 [Inp] | EX 1 [Out] */
 /* N/A */       wire [4:0]OutEX1;
@@ -93,7 +96,7 @@ wire Rw;
 /* N/A */       wire [1:0]OutWB2;
 
 /* M 2 [Inp] | M 2 [Out] */
-/* N/A */      wire [2:0]OutM2;
+/* N/A */      wire [3:0]OutM2;
 
 
 //EX_MEM [Inp]:
@@ -154,7 +157,7 @@ MxDP prepc (
 );
 
 //Instancia PC
-PC pc ( CLK, OutMx3, OutPC ); 
+PC pc ( CLK, OutMux5, OutPC); 
 
 //Instancia ADD 1
 ADD add ( OutPC, 32'd4, OutAdd1 );
@@ -175,7 +178,20 @@ IF_ID IF (
 	OutInsIF_ID
 
 );
-
+//Shif Left 26/28
+Sl_3 Shifjump (
+	OutIns[25:0],
+	OutShiftjump
+	);
+MxDP muxjump (
+	OutM2[3],
+	OutMx3,
+	{
+		OutShiftjump,
+		OutAdd1[3:0]
+	},
+	OutMux5
+	);
 /*--------- SECCIÓN 1 ------ */
 
 
@@ -194,7 +210,8 @@ CUnit cunit (
 	AOp,
 	MWrite,
 	ALUsrc,
-	Rw
+	Rw,
+	Jump
 
 );
 
@@ -219,7 +236,7 @@ SignE Extensor ( OutInsIF_ID[15:0], OutExt );
 WB wb_s2 ( { MtoR, Rw }, CLK, OutWB1 );
 
 //Instancia M
-M m_s2 ( { Branch, MRead, MWrite }, CLK, OutM1);
+M m_s2 ( { Jump, Branch, MRead, MWrite }, CLK, OutM1);
 
 //Instancia EX
 EX ex_s2 ( { RegDs, AOp, ALUsrc }, CLK, OutEX1);

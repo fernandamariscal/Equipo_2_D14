@@ -28,7 +28,7 @@ initial
 
 	begin
 		
-		$readmemh("testF1_BankR",BReg);
+		$readmemh("TestBankR3",BReg);
 
 	end
 

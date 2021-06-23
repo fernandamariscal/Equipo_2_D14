@@ -1,13 +1,13 @@
 `timescale 1ns/1ns
 
 //1- Module y Puertos 1/0
-module SL3 (
+module Sl_3 (
 		
 		//Entradas
-		input [25:0]SLin3,
+		input [25:0]SLInp_3,
 		
 		//Salidas
-		output reg [27:0]SLout3
+		output reg [27:0]SLOut_3
 
 );
 
@@ -16,6 +16,6 @@ module SL3 (
 //3- Cuerpo del modulo
 
 
-assign SLout3 = SLin3 << 2;
+assign SLOut_3 = SLInp_3 << 2;
 
 endmodule

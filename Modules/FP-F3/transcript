@@ -1,0 +1,242 @@
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUC.v was successful.
+# Compile of BankR.v was successful with warnings.
+# Compile of CUnit.v was successful.
+# Compile of DMem.v was successful.
+# Compile of EX.v was successful.
+# Compile of EX_MEM.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of IMem.v was successful.
+# Compile of M.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of MxDP.v was successful.
+# Compile of MxSDP.v was successful.
+# Compile of PC.v was successful.
+# Compile of SingE.v was successful.
+# Compile of SingleDP.v was successful.
+# Compile of Sl_3.v was successful.
+# Compile of SL2.v was successful.
+# Compile of TB_SingleDP.v was successful.
+# Compile of WB.v was successful.
+# 22 compiles, 0 failed with no errors.
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUC.v was successful.
+# Compile of BankR.v was successful with warnings.
+# Compile of CUnit.v was successful.
+# Compile of DMem.v was successful.
+# Compile of EX.v was successful.
+# Compile of EX_MEM.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of IMem.v was successful.
+# Compile of M.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of MxDP.v was successful.
+# Compile of MxSDP.v was successful.
+# Compile of PC.v was successful.
+# Compile of SingE.v was successful.
+# Compile of SingleDP.v was successful.
+# Compile of Sl_3.v was successful.
+# Compile of SL2.v was successful.
+# Compile of TB_SingleDP.v was successful.
+# Compile of WB.v was successful.
+# 22 compiles, 0 failed with no errors.
+vsim jump.TB_SingleDP
+# vsim jump.TB_SingleDP 
+# Start time: 23:25:27 on Jun 22,2021
+# Loading jump.TB_SingleDP
+# Loading jump.SingleDP
+# Loading jump.MxDP
+# Loading jump.PC
+# Loading jump.ADD
+# Loading jump.IMem
+# Loading jump.IF_ID
+# Loading jump.Sl_3
+# Loading jump.CUnit
+# Loading jump.BankR
+# Loading jump.SignE
+# Loading jump.WB
+# Loading jump.M
+# Loading jump.EX
+# Loading jump.ID_EX
+# Loading jump.SL2
+# Loading jump.ALUC
+# Loading jump.ALU
+# Loading jump.MxSDP
+# Loading jump.EX_MEM
+# Loading jump.DMem
+# Loading jump.MEM_WB
+run -all
+#  Rw[x]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         x]; BReg[ x]:          x;
+#  Rw[x]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         x]; BReg[ x]:          x;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         x]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 8]:          8; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 8]:          8;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 8]:          8;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[x]; Rd1[ 8]:       1337; Rd2[ 8]:       1337; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         0]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:        613;
+#  Rw[x]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:        613;
+# ** Note: $stop    : C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v(31)
+#    Time: 9 us  Iteration: 0  Instance: /TB_SingleDP
+# Break in Module TB_SingleDP at C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v line 31
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUC.v was successful.
+# Compile of BankR.v was successful with warnings.
+# Compile of CUnit.v was successful.
+# Compile of DMem.v was successful.
+# Compile of EX.v was successful.
+# Compile of EX_MEM.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of IMem.v was successful.
+# Compile of M.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of MxDP.v was successful.
+# Compile of MxSDP.v was successful.
+# Compile of PC.v was successful.
+# Compile of SingE.v was successful.
+# Compile of SingleDP.v was successful.
+# Compile of Sl_3.v was successful.
+# Compile of SL2.v was successful.
+# Compile of TB_SingleDP.v was successful.
+# Compile of WB.v was successful.
+# 22 compiles, 0 failed with no errors.
+vsim jump.TB_SingleDP
+# End time: 23:28:49 on Jun 22,2021, Elapsed time: 0:03:22
+# Errors: 0, Warnings: 4
+# vsim jump.TB_SingleDP 
+# Start time: 23:28:49 on Jun 22,2021
+# Loading jump.TB_SingleDP
+# Loading jump.SingleDP
+# Loading jump.MxDP
+# Loading jump.PC
+# Loading jump.ADD
+# Loading jump.IMem
+# Loading jump.IF_ID
+# Loading jump.Sl_3
+# Loading jump.CUnit
+# Loading jump.BankR
+# Loading jump.SignE
+# Loading jump.WB
+# Loading jump.M
+# Loading jump.EX
+# Loading jump.ID_EX
+# Loading jump.SL2
+# Loading jump.ALUC
+# Loading jump.ALU
+# Loading jump.MxSDP
+# Loading jump.EX_MEM
+# Loading jump.DMem
+# Loading jump.MEM_WB
+run -all
+#  Rw[x]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         x]; BReg[ x]:          x;
+#  Rw[x]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         x]; BReg[ x]:          x;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         x]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 8]:          8; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 8]:          8;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 8]:          8;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[x]; Rd1[ 8]:       1337; Rd2[ 8]:       1337; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         0]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:        613;
+#  Rw[x]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:        613;
+# ** Note: $stop    : C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v(31)
+#    Time: 9 us  Iteration: 0  Instance: /TB_SingleDP
+# Break in Module TB_SingleDP at C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v line 31
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUC.v was successful.
+# Compile of BankR.v was successful with warnings.
+# Compile of CUnit.v was successful.
+# Compile of DMem.v was successful.
+# Compile of EX.v was successful.
+# Compile of EX_MEM.v was successful.
+# Compile of ID_EX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of IMem.v was successful.
+# Compile of M.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of MxDP.v was successful.
+# Compile of MxSDP.v was successful.
+# Compile of PC.v was successful.
+# Compile of SingE.v was successful.
+# Compile of SingleDP.v was successful.
+# Compile of Sl_3.v was successful.
+# Compile of SL2.v was successful.
+# Compile of TB_SingleDP.v was successful.
+# Compile of WB.v was successful.
+# 22 compiles, 0 failed with no errors.
+vsim jump.TB_SingleDP
+# End time: 23:33:29 on Jun 22,2021, Elapsed time: 0:04:40
+# Errors: 0, Warnings: 2
+# vsim jump.TB_SingleDP 
+# Start time: 23:33:29 on Jun 22,2021
+# Loading jump.TB_SingleDP
+# Loading jump.SingleDP
+# Loading jump.MxDP
+# Loading jump.PC
+# Loading jump.ADD
+# Loading jump.IMem
+# Loading jump.IF_ID
+# Loading jump.Sl_3
+# Loading jump.CUnit
+# Loading jump.BankR
+# Loading jump.SignE
+# Loading jump.WB
+# Loading jump.M
+# Loading jump.EX
+# Loading jump.ID_EX
+# Loading jump.SL2
+# Loading jump.ALUC
+# Loading jump.ALU
+# Loading jump.MxSDP
+# Loading jump.EX_MEM
+# Loading jump.DMem
+# Loading jump.MEM_WB
+run -all
+#  Rw[x]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         x]; BReg[ x]:          x;
+#  Rw[x]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         x]; BReg[ x]:          x;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         x]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 8]:          8; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 8]:          8;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 8]:          8;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[      1337]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ 0]:          0; Rd2[ 0]:          0; Din[         0]; BReg[ 0]:          0;
+#  Rw[x]; Rd1[ 8]:       1337; Rd2[ 8]:       1337; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         0]; BReg[ 0]:          0;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[         0]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:       1337;
+#  Rw[1]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:        613;
+#  Rw[x]; Rd1[ x]:          x; Rd2[ x]:          x; Din[       613]; BReg[ 8]:        613;
+# ** Note: $stop    : C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v(31)
+#    Time: 9 us  Iteration: 0  Instance: /TB_SingleDP
+# Break in Module TB_SingleDP at C:/Users/52332/Desktop/Equipo_2_D14/Modules/FP-F3/TB_SingleDP.v line 31
+# End time: 23:40:05 on Jun 22,2021, Elapsed time: 0:06:36
+# Errors: 0, Warnings: 1
