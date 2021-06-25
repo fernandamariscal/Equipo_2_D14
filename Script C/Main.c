@@ -4,11 +4,13 @@
 #include <math.h>
 #include <string.h>
 
-#define TAM 200
+#define TAM 5000
 #define ENTER 10
 
 double converBin(int num, int bits);
 void vaciar(char temp[]);
+
+int entrar[TAM];
 
 int main()
 {
@@ -42,7 +44,6 @@ int main()
     char temp;
     int contar=0;
 
-
 	FILE *f;
 	FILE *pf;
 
@@ -70,13 +71,37 @@ int main()
         vaciar(num1);
         vaciar(num2);
         vaciar(num3);
-
-        for(i = 0;temp != ' ';i++){
-            temp = fgetc(f);
-            if(temp != ' '){
-                operacion[i]=temp;
+        if(cont != contar){
+            for(i = 0;(temp != ' ' && temp != ENTER) && !feof(f);i++){
+                printf("hola -%d-", cont);
+                temp = fgetc(f);
+                if(temp != ' ' && temp != ENTER){
+                    operacion[i]=temp;
+                }
+                if(i==0 && temp == ENTER){
+                    entrar[cont] = 1;
+                    //printf("si es enter %d", cont);
+                }
+                printf("\noperacion: %s\ncont: %d\n", operacion, cont);
+                if(temp == ' ' && temp == ENTER)
+                    break;
             }
-        }
+
+       }
+//        else{
+//            for(i = 0;temp != ' ' && !feof(f) && temp != ENTER;i++){
+//                printf("hola");
+//                temp = fgetc(f);
+//                if(temp != ' ' && temp != ENTER){
+//                    operacion[i]=temp;
+//                }
+//                if(i==0 && temp == ENTER){
+//                    entrar[cont] = 1;
+//                    break;
+//                }
+//            }
+//        }
+
 
         strcpy(oper[cont],operacion);
 
@@ -96,7 +121,7 @@ int main()
                     strcpy(especial[cont],"000000");
                     insTipo[cont] = 1;
                }
-            else if(strcmp(oper[cont],"mul")==0 || strcmp(oper[cont],"Mul")==0//mult
+            else if(strcmp(oper[cont],"mul")==0 || strcmp(oper[cont],"Mul")==0//mul
                || strcmp(oper[cont],"MUL")==0){
                     strcpy(funct[cont],"011000");
                     strcpy(especial[cont],"000000");
@@ -125,6 +150,15 @@ int main()
                     strcpy(funct[cont],"101010");
                     strcpy(especial[cont],"000000");
                     insTipo[cont] = 1;
+               }
+            else if(strcmp(oper[cont],"nop")==0 || strcmp(oper[cont],"Nop")==0//slt
+               || strcmp(oper[cont],"NOP")==0){
+                    strcpy(funct[cont],"000000");
+                    strcpy(especial[cont],"000000");
+                    insTipo[cont] = 1;
+                    priD[cont]=0;
+                    segD[cont]=0;
+                    terD[cont]=0;
                }
                         //I
 //                        else if(strcmp(oper[cont],"sll")==0 || strcmp(oper[cont],"Sll")==0//sll
@@ -179,6 +213,18 @@ int main()
                     insTipo[cont] = 2;
                     segD[cont]=0;
                }
+            else if(strcmp(oper[cont],"j")==0 || strcmp(oper[cont],"J")==0){//J
+                    strcpy(especial[cont],"000010");
+                    insTipo[cont] = 3;
+               }
+            else if(entrar[cont] == 1){
+                strcpy(funct[cont],"000000");
+                strcpy(especial[cont],"000000");
+                insTipo[cont] = 1;
+                priD[cont]=0;
+                segD[cont]=0;
+                terD[cont]=0;
+            }
             else{
                 if(lineaError == 0){
                     validacion=0;
@@ -187,102 +233,145 @@ int main()
                 }
             }
         }
+        if(strcmp(funct[cont],"000000")!=0 && validacion != 0/* && entrar[cont] == 0*/){
+            if(strcmp(especial[cont],"000010") != 0){
+                for(i = 0;i<2 && temp != ENTER;i++){
+                    carac1[i]=temp;
+                    temp = fgetc(f);
+                }
 
+                for(i = 0;temp != ',' && temp != ENTER;i++){
+                    num1[i]=temp;
+                    temp = fgetc(f);
+                }
+                if(strcmp(especial[cont],"000111") != 0){
+                    for(i = 0;i<3 && temp != ENTER;i++){
+                        carac2[i]=temp;
+                        temp = fgetc(f);
+                    }
+                    for(i = 0;temp != ',' && temp != ENTER;i++){
+                        num2[i]=temp;
+                        temp = fgetc(f);
+                    }
+                }
+            }
+            if(strcmp(especial[cont],"000010") == 0)
+                for(i = 0;i<2&& temp != ENTER;i++){
+                    carac3[i]=temp;
+                    temp = fgetc(f);
+                }
+            else
+                for(i = 0;i<3&& temp != ENTER;i++){
+                    carac3[i]=temp;
+                    temp = fgetc(f);
+                }
 
-        for(i = 0;i<2;i++){
-            carac1[i]=temp;
-            temp = fgetc(f);
-        }
-        for(i = 0;temp != ',';i++){
-            num1[i]=temp;
-            temp = fgetc(f);
-        }
-        if(strcmp(especial[cont],"000111") != 0){
-            for(i = 0;i<3;i++){
-                carac2[i]=temp;
+            for(i = 0;!feof(f) && temp != ENTER;i++){
+                num3[i]=temp;
                 temp = fgetc(f);
             }
-            for(i = 0;temp != ',';i++){
-                num2[i]=temp;
-                temp = fgetc(f);
+
+            if(insTipo[cont] == 1){
+                if((carac1[0] != ' ' || carac1[1] != '$') && lineaError == 0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+
+                if((carac2[0]!=','||carac2[1]!=' '||carac2[2]!='$')&&lineaError==0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+                if((carac3[0]!=','||carac3[1]!= ' '||carac3[2]!='$')&&lineaError==0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
             }
-        }
-        for(i = 0;i<3;i++){
-            carac3[i]=temp;
-            temp = fgetc(f);
-        }
-        for(i = 0;!feof(f) && temp != ENTER;i++){
-            num3[i]=temp;
-            temp = fgetc(f);
+            else if(insTipo[cont] == 2 && strcmp(especial[cont],"000111")!=0){
+                if((carac1[0] != ' ' || carac1[1] != '$') && lineaError == 0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+
+                if((carac2[0] != ','||carac2[1] !=' '||carac2[2] != '$'||carac2[0] == '\n') && lineaError==0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+                if((carac3[0] != ','||carac3[1] !=' '||carac3[2] != '#') && lineaError==0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+            }
+            if(strcmp(especial[cont],"000111")==0){
+                if((carac1[0] != ' ' || carac1[1] != '$') && lineaError == 0  ){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+                if((carac3[0]!=','||carac3[1]!=' '||carac3[2]!= '#')&&lineaError==0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+            }
+            if(insTipo[cont]==3){
+               if((carac3[0]!=' '||carac3[1]!='#')&&lineaError==0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+            }
+
+            priD[cont] = atoi(num1);
+            segD[cont] = atoi(num2);
+            terD[cont] = atoi(num3);
+
+            if(insTipo[cont]==1 &&(priD[cont]<0 || priD[cont]>31 || segD[cont]<0 ||
+                segD[cont]>31 || terD[cont]<0 || terD[cont]>31)){
+                validacion=0;
+                cont1--;
+                lineaError=cont;
+            }
+            if(insTipo[cont]==2 &&(priD[cont]<0 || priD[cont]>31 || segD[cont]<0
+                || segD[cont]>31 || terD[cont]<0 || terD[cont]>65535)){
+                validacion=0;
+                cont1--;
+                lineaError=cont;
+            }
+            if(insTipo[cont]==3 &&(terD[cont]<0 || terD[cont]>33554431)){
+                validacion=0;
+                cont1--;
+                lineaError=cont;
+            }
+
+            for(i=0;i<10;i++){
+                if(num1[i]!='0'&&num1[i]!='1'&&num1[i]!='2'&&num1[i]!='3'&&num1[i]!='4'&&num1[i]!='5'&&
+                   num1[i]!='6'&&num1[i]!='7'&&num1[i]!='8'&&num1[i]!='9'&&num1[i]!='\0' && validacion!=0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+                if(num2[i]!='0'&&num2[i]!='1'&&num2[i]!='2'&&num2[i]!='3'&&num2[i]!='4'&&num2[i]!='5'&&
+                   num2[i]!='6'&&num2[i]!='7'&&num2[i]!='8'&&num2[i]!='9'&&num2[i]!='\0'&&validacion!=0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+                if(num3[i]!='0'&&num3[i]!='1'&&num3[i]!='2'&&num3[i]!='3'&&num3[i]!='4'&&num3[i]!='5'&&
+                   num3[i]!='6'&&num3[i]!='7'&&num3[i]!='8'&&num3[i]!='9'&&num3[i]!='\0'&&validacion!=0){
+                    validacion=0;
+                    cont1--;
+                    lineaError=cont;
+                }
+            }
         }
 
-        if(insTipo[cont] == 1){
-            if((carac1[0] != ' ' || carac1[1] != '$') && lineaError == 0){
-                validacion=0;
-                cont1--;
-                lineaError=cont;
-            }
-
-            if((carac2[0] != ','||carac2[1] != ' ' ||carac2[2] != '$') && lineaError==0){
-                validacion=0;
-                cont1--;
-                lineaError=cont;
-            }
-            if((carac3[0] != ','||carac3[1] != ' ' ||carac3[2] != '$') && lineaError==0){
-                validacion=0;
-                cont1--;
-                lineaError=cont;
-            }
-        }
-        else if(insTipo[cont] == 2 && strcmp(especial[cont],"000111")!=0){
-            if((carac1[0] != ' ' || carac1[1] != '$') && lineaError == 0){
-                validacion=0;
-                cont1--;
-                lineaError=cont;
-            }
-
-            if((carac2[0] != ','||carac2[1] !=' '||carac2[2] != '$') && lineaError==0){
-                validacion=0;
-                cont1--;
-                lineaError=cont;
-            }
-            if((carac3[0] != ','||carac3[1] !=' '||carac3[2] != '#') && lineaError==0){
-                validacion=0;
-                cont1--;
-                lineaError=cont;
-            }
-        }
-        if(strcmp(especial[cont],"000111")==0){
-            if((carac1[0] != ' ' || carac1[1] != '$') && lineaError == 0){
-                validacion=0;
-                cont1--;
-                lineaError=cont;
-            }
-            if((carac3[0] != ','||carac3[1] !=' '||carac3[2] != '#') && lineaError==0){
-                validacion=0;
-                cont1--;
-                lineaError=cont;
-            }
-        }
-
-        priD[cont] = atoi(num1);
-        segD[cont] = atoi(num2);
-        terD[cont] = atoi(num3);
-
-        if(insTipo[cont]==1 &&(priD[cont]<0 || priD[cont]>31 || segD[cont]<0 ||
-            segD[cont]>31 || terD[cont]<0 || terD[cont]>31)){
-            validacion=0;
-            cont1--;
-            lineaError=cont;
-        }
-        if(insTipo[cont]==2 &&(priD[cont]<0 || priD[cont]>31 || segD[cont]<0
-            || segD[cont]>31 || terD[cont]<0 || terD[cont]>65535)){
-            validacion=0;
-            cont1--;
-            lineaError=cont;
-        }
-
-
+////////////////////////////////oooooooooooooooooooooooooooooooooooooooooooooooo
 
                     //cont1 ++;
 
@@ -295,13 +384,19 @@ int main()
         sprintf(segC[cont], "%05.0lf", converBin(segD[cont], 5));
         if(insTipo[cont] == 1)
             sprintf(terC[cont], "%05.0lf", converBin(terD[cont], 5));
-        else
+        else if(insTipo[cont] == 2)
             sprintf(terC[cont], "%016.0lf", converBin(terD[cont], 16));
+        else
+            sprintf(terC[cont], "%026.0lf", converBin(terD[cont], 16));
         /////////////////////////////////////////////////////////////////////////////////////////
 
             //Concatenacion de los datos en binario segun el orden que requiera la instruccion
                 //concatenar instruccion R
-        if(insTipo[cont] == 1){
+        if(insTipo[cont] == 3){
+            strcpy(concatenar, especial[cont]);
+            strcat(concatenar, terC[cont]);
+        }
+        else if(insTipo[cont] == 1){
             strcpy(concatenar, especial[cont]);
             strcat(concatenar, segC[cont]);
             strcat(concatenar, terC[cont]);
@@ -325,26 +420,32 @@ int main()
         }
         strcpy(instruccion[cont], concatenar);
         //////////////////////////////////////////////////////////////////////////////////////
-                cont++; //indice de la instruccion en cada arreglo
+        cont++; //indice de la instruccion en cada arreglo
         //Impresion en un archivo de texto de las instrucciones totales
 
                 if((pf = fopen("instrucciones.txt", "w")) != NULL){
                     if(validacion == 1){
                         for (i=0;i<cont;i++ ){
-                            if(i!=0)
-                            fprintf(pf, "\n");
-                            for(j=0;j<32;j++){
-                                if(j == 8 || j == 16 || j == 24)
+                           if(entrar[i] == 0){
+                                if(i!=0)
                                 fprintf(pf, "\n");
-                                fprintf(pf, "%c", instruccion[i][j]);
+                                for(j=0;j<32;j++){
+                                    if(j == 8 || j == 16 || j == 24)
+                                    fprintf(pf, "\n");
+                                    fprintf(pf, "%c", instruccion[i][j]);
+                                }
                             }
-                        }
+                       }
                     }
                     else
                         fprintf(pf,"Error en tu codigo linea %d", lineaError+1);
                     fclose(pf);
                 }
+        if(cont == contar){
+            fclose(f);
+        }
         ///////////////////////////////////////////////////////////////////////////////////////////
+
     }while(cont < contar);
 
 	return 0;
